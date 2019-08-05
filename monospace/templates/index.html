@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}        
+{% if articles %}
+    {% for article in articles %}        
+        <article>
+            <header>
+            <h1><a href="{{ SITEURL }}" id="site-title"> {# {{ SITENAME }} #} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>
+            {% endif %}</a> {#:#} <a href="{{ SITEURL }}{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
+                {% if not HIDE_DATE %}
+                    <time datetime="{{ article.date.isoformat() }}">
+                        {{ article.locale_date }}
+                    </time>
+                {% endif %}
+            </header>
+        </article>
+    {% endfor %}
+{% endif %}
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
+{% endblock content %}

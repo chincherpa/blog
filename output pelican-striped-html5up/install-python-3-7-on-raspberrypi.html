@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+          <title>lulef.online Blog</title>
+        <meta charset="utf-8" />
+
+
+
+        <link rel="stylesheet" href="theme/css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="theme/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+        <header id="banner" class="body">
+                <h1><a href="">lulef.online Blog <strong></strong></a></h1>
+        </header><!-- /#banner -->
+<!-- Sidebar -->
+            <div id="sidebar">
+
+                <!-- Logo -->
+                    <h1 id="logo"><a href="">lulef.online Blog</a></h1>
+                    <!-- Text -->
+                    <section class="box text-style1">
+                        <div class="inner">
+                            <p>
+                                <strong>Ut scelerisque nec sapien ut sollicitudin:</strong><br />
+                            </p>
+                        </div>
+                    </section>
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            
+                            <li><a href="#">Nam euismod dui</a></li>
+                            <li><a href="#">Integer eget eros</a></li>
+                            <li><a href="#">Proin vehicula tortor</a></li>
+                            <li><a href="#">Vestibulum consectetur tellus</a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Search -->
+                    <!-- <section class="box search">
+                        <form method="post" action="#">
+                            <input type="text" class="text" name="search" placeholder="Search" />
+                        </form>
+                    </section> -->
+
+                
+
+                <!-- Recent Posts -->
+                    <section class="box recent-posts">
+                        <header>
+                            <h2>Contact Me</h2>
+                        </header>
+                        <ul>
+                            <li><a class="icon fa-envelope" href="#"> eMail</a></li>
+                            <li><a class="icon fa-twitter" href="#"> Twitter</a></li>
+                            <li><a class="icon fa-facebook" href="#"> Facebook</a></li>
+                            <li><a class="icon fa-github" href="#"> Github</a></li>
+                            
+                        </ul>
+                    </section>
+
+
+
+                <!-- Copyright -->
+                    <ul id="copyright">
+                        <li>Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
+                    </ul>
+
+            </div><!-- /#menu -->
+<div id="content">
+<div class="inner">
+        <article class="box post post-excerpt">
+                <header> 
+                <h2><a href="install-python-3-7-on-raspberrypi.html" rel="bookmark" title="Permalink to Install Python 3.7 on RaspberryPi">Install Python 3.7 on RaspberryPi</a></h2> 
+                <p></p>
+                </header>
+                <div class="info">
+                    <span class="date" datetime="2019-06-24T20:37:00+02:00"><span class="month">Jun</span> <span class="day">24</span> <span class="month"> 2019</span></span>
+                    <ul class="stats">
+                                    <li><a href="mailto:?Subject=Install Python 3.7 on RaspberryPi&Body=I%20saw%20this%20and%20thought%20of%20you!%20 /install-python-3-7-on-raspberrypi.html" class="icon fa-envelope">&nbsp;</a></li>
+                                    <li><a href="http://reddit.com/submit?url=/install-python-3-7-on-raspberrypi.html&title=#Install Python 3.7 on RaspberryPi"" class="icon fa-reddit">&nbsp;</a></li>
+                                    <li><a href="https://twitter.com/share?url=/install-python-3-7-on-raspberrypi.html&text=&hashtags=GnotC" class="icon fa-twitter">&nbsp;</a></li>
+                                    <li><a href="https://www.facebook.com/sharer.php?u=/install-python-3-7-on-raspberrypi.html" class="icon fa-facebook">&nbsp;</a></li>
+                                </ul>
+                </div><!-- /.post-info -->
+                <div class="entry-content"> &nbsp; </div><!-- /.entry-content -->
+        </article>
+    <!-- wp:code -->
+
+<div class="highlight"><pre><span></span><span class="nv">sudo</span> <span class="nv">apt</span><span class="o">-</span><span class="nv">get</span> <span class="nv">update</span>
+<span class="nv">sudo</span> <span class="nv">apt</span><span class="o">-</span><span class="nv">get</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">build</span><span class="o">-</span><span class="nv">essential</span> <span class="nv">tk</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libncurses5</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libncursesw5</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libreadline6</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libdb5</span>.<span class="mi">3</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libgdbm</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libsqlite3</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libssl</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libbz2</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libexpat1</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">liblzma</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">zlib1g</span><span class="o">-</span><span class="nv">dev</span> <span class="nv">libffi</span><span class="o">-</span><span class="nv">dev</span>
+
+## <span class="nv">Compile</span> <span class="ss">(</span><span class="nv">takes</span> <span class="nv">a</span> <span class="k">while</span><span class="o">!</span><span class="ss">)</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">python</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">ftp</span><span class="o">/</span><span class="nv">python</span><span class="o">/</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">Python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>.<span class="nv">tar</span>.<span class="nv">xz</span>
+<span class="nv">tar</span> <span class="nv">xf</span> <span class="nv">Python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>.<span class="nv">tar</span>.<span class="nv">xz</span>
+<span class="nv">cd</span> <span class="nv">Python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>
+.<span class="o">/</span><span class="nv">configure</span> <span class="o">--</span><span class="nv">prefix</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>
+<span class="nv">make</span> <span class="o">-</span><span class="nv">j</span> <span class="mi">4</span>
+
+## <span class="nv">Install</span>
+<span class="nv">sudo</span> <span class="nv">make</span> <span class="nv">altinstall</span>
+
+## <span class="nv">Make</span> <span class="nv">Python</span> <span class="mi">3</span>.<span class="mi">7</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">version</span>, <span class="nv">make</span> <span class="nv">aliases</span>
+## <span class="nv">sudo</span> <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pydoc3</span>.<span class="mi">7</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pydoc3</span>.<span class="mi">7</span>
+## <span class="nv">sudo</span> <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">7</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">7</span>
+## <span class="nv">sudo</span> <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">7</span><span class="nv">m</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python3</span>.<span class="mi">7</span><span class="nv">m</span>
+<span class="nv">sudo</span> <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pyvenv</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pyvenv</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>
+<span class="nv">sudo</span> <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pip3</span>.<span class="mi">7</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">pip3</span>.<span class="mi">7</span>
+<span class="nv">alias</span> <span class="nv">python</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">/usr/bin/python3.7</span><span class="s1">&#39;</span>
+<span class="nv">alias</span> <span class="nv">python3</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">/usr/bin/python3.7</span><span class="s1">&#39;</span>
+
+<span class="nv">ls</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python</span><span class="o">*</span>
+<span class="nv">cd</span> ..
+<span class="nv">sudo</span> <span class="nv">rm</span> <span class="o">-</span><span class="nv">r</span> <span class="nv">Python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>
+<span class="nv">rm</span> <span class="nv">Python</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">7</span>.<span class="mi">3</span>.<span class="nv">tar</span>.<span class="nv">xz</span>
+. <span class="o">~/</span>.<span class="nv">bashrc</span>
+
+## <span class="nv">And</span> <span class="nv">verify</span>:
+<span class="nv">python</span> <span class="o">-</span><span class="nv">V</span>
+
+## <span class="nv">And</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">revert</span>:
+<span class="nv">update</span><span class="o">-</span><span class="nv">alternatives</span> <span class="o">--</span><span class="nv">config</span> <span class="nv">python</span>
+</pre></div>
+
+
+<!-- /wp:code -->
+  </div><!-- /.entry-content -->
+  <!-- Pagination -->
+            <div class="pagination">
+            </div>
+ 
+</div>
+</div>
+<!-- /#contentinfo -->
+</body>
+</html>

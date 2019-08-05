@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+          <title>lulef.online Blog</title>
+        <meta charset="utf-8" />
+
+
+
+        <link rel="stylesheet" href="theme/css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="theme/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+        <header id="banner" class="body">
+                <h1><a href="">lulef.online Blog <strong></strong></a></h1>
+        </header><!-- /#banner -->
+<!-- Sidebar -->
+            <div id="sidebar">
+
+                <!-- Logo -->
+                    <h1 id="logo"><a href="">lulef.online Blog</a></h1>
+                    <!-- Text -->
+                    <section class="box text-style1">
+                        <div class="inner">
+                            <p>
+                                <strong>Ut scelerisque nec sapien ut sollicitudin:</strong><br />
+                            </p>
+                        </div>
+                    </section>
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            
+                            <li><a href="#">Nam euismod dui</a></li>
+                            <li><a href="#">Integer eget eros</a></li>
+                            <li><a href="#">Proin vehicula tortor</a></li>
+                            <li><a href="#">Vestibulum consectetur tellus</a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Search -->
+                    <!-- <section class="box search">
+                        <form method="post" action="#">
+                            <input type="text" class="text" name="search" placeholder="Search" />
+                        </form>
+                    </section> -->
+
+                
+
+                <!-- Recent Posts -->
+                    <section class="box recent-posts">
+                        <header>
+                            <h2>Contact Me</h2>
+                        </header>
+                        <ul>
+                            <li><a class="icon fa-envelope" href="#"> eMail</a></li>
+                            <li><a class="icon fa-twitter" href="#"> Twitter</a></li>
+                            <li><a class="icon fa-facebook" href="#"> Facebook</a></li>
+                            <li><a class="icon fa-github" href="#"> Github</a></li>
+                            
+                        </ul>
+                    </section>
+
+
+
+                <!-- Copyright -->
+                    <ul id="copyright">
+                        <li>Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
+                    </ul>
+
+            </div><!-- /#menu -->
+<div id="content">
+<div class="inner">
+        <article class="box post post-excerpt">
+                <header> 
+                <h2><a href="excel-zeugs.html" rel="bookmark" title="Permalink to EXCEL zeugs">EXCEL zeugs</a></h2> 
+                <p></p>
+                </header>
+                <div class="info">
+                    <span class="date" datetime="2018-11-30T12:09:00+01:00"><span class="month">Nov</span> <span class="day">30</span> <span class="month"> 2018</span></span>
+                    <ul class="stats">
+                                    <li><a href="mailto:?Subject=EXCEL zeugs&Body=I%20saw%20this%20and%20thought%20of%20you!%20 /excel-zeugs.html" class="icon fa-envelope">&nbsp;</a></li>
+                                    <li><a href="http://reddit.com/submit?url=/excel-zeugs.html&title=#EXCEL zeugs"" class="icon fa-reddit">&nbsp;</a></li>
+                                    <li><a href="https://twitter.com/share?url=/excel-zeugs.html&text=&hashtags=GnotC" class="icon fa-twitter">&nbsp;</a></li>
+                                    <li><a href="https://www.facebook.com/sharer.php?u=/excel-zeugs.html" class="icon fa-facebook">&nbsp;</a></li>
+                                </ul>
+                </div><!-- /.post-info -->
+                <div class="entry-content"> &nbsp; </div><!-- /.entry-content -->
+        </article>
+    <p>EXCEL Funktionen</p>
+<!--more-->
+
+<div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="s">Folderpicker</span>
+<span class="nv">Function</span> <span class="nv">GetFolder</span><span class="ss">(</span><span class="nv">strPath</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">fldr</span> <span class="nv">As</span> <span class="nv">FileDialog</span>
+<span class="nv">Dim</span> <span class="nv">sItem</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Set</span> <span class="nv">fldr</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">FileDialog</span><span class="ss">(</span><span class="nv">msoFileDialogFolderPicker</span><span class="ss">)</span>
+<span class="nv">With</span> <span class="nv">fldr</span>
+    .<span class="nv">Title</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Pfad zu den Bildern</span><span class="s2">&quot;</span>
+    .<span class="nv">AllowMultiSelect</span> <span class="o">=</span> <span class="nv">False</span>
+    .<span class="nv">InitialFileName</span> <span class="o">=</span> <span class="nv">strPath</span>
+    <span class="k">If</span> .<span class="k">Show</span> <span class="o">&lt;&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="k">Then</span> <span class="k">GoTo</span> <span class="nl">NextCode</span>
+    <span class="nv">sItem</span> <span class="o">=</span> .<span class="nv">SelectedItems</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>
+<span class="k">End</span> <span class="nv">With</span>
+<span class="nv">NextCode</span>:
+<span class="nv">GetFolder</span> <span class="o">=</span> <span class="nv">sItem</span>
+<span class="nv">Set</span> <span class="nv">fldr</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+<span class="o">----------------------------------------------------------</span>
+
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">cpearson</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">excel</span><span class="o">/</span><span class="nv">FOLDERTREEVIEW</span>.<span class="nv">ASPX</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Mehrere Spalten zu einer</span>
+<span class="o">=</span><span class="nv">INDEX</span><span class="ss">(</span><span class="nv">MyData</span><span class="c1">;1+GANZZAHL((ZEILE(A1)-1)/SPALTEN(MyData));REST(ZEILE(A1)-1+SPALTEN(MyData);SPALTEN(MyData))+1)</span>
+<span class="s1">&#39;</span><span class="s">runterziehen bis Fehler #BEZUG</span>
+<span class="o">------------------------------------------------</span>
+<span class="nv">Sub</span> <span class="nv">Dictionary</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s"> Select Tools-&gt;References from the Visual Basic menu.</span>
+<span class="s1">&#39;</span><span class="s"> Check box beside &quot;Microsoft Scripting Runtime&quot; in the list.</span>
+
+<span class="nv">Dim</span> <span class="nv">sName</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">dict</span> <span class="nv">As</span> <span class="nv">New</span> <span class="nv">Scripting</span>.<span class="nv">Dictionary</span>
+<span class="nv">dict</span>.<span class="nv">CompareMode</span> <span class="o">=</span> <span class="nv">TextCompare</span> <span class="s1">&#39;</span><span class="s">GROSS/klein egal</span>
+
+<span class="s1">&#39;</span><span class="s"> Add to fruit to Dictionary</span>
+<span class="nv">dict</span>.<span class="nv">Add</span> <span class="s2">&quot;</span><span class="s">Lutz</span><span class="s2">&quot;</span>, <span class="mi">1</span>
+<span class="nv">dict</span>.<span class="nv">Add</span> <span class="s2">&quot;</span><span class="s">Hannah</span><span class="s2">&quot;</span>, <span class="mi">2</span>
+
+<span class="nv">dict</span>.<span class="nv">Add</span> <span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span>, <span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">B1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span>
+<span class="nv">dict</span>.<span class="nv">Add</span> <span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A2</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span>, <span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">B2</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span>
+
+<span class="s1">&#39;</span><span class="s">sName = InputBox(&quot;Name neuer Eintrag&quot;)</span>
+<span class="s1">&#39;</span><span class="s">sAlter = InputBox(&quot;Wert neuer Eintrag&quot;)</span>
+<span class="s1">&#39;</span><span class="s">dict.Add sName, sAlter</span>
+
+<span class="nv">sFrage</span> <span class="o">=</span> <span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Name abfragen</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="k">If</span> <span class="nv">dict</span>.<span class="nv">Exists</span><span class="ss">(</span><span class="nv">sFrage</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="nv">MsgBox</span> <span class="nv">sFrage</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s"> existiert mit dem Wert: </span><span class="s2">&quot;</span> <span class="o">&amp;</span> <span class="nv">dict</span><span class="ss">(</span><span class="nv">sFrage</span><span class="ss">)</span>
+<span class="k">Else</span>
+<span class="nv">MsgBox</span> <span class="nv">sFrage</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s"> existiert nicht.</span><span class="s2">&quot;</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="nv">Set</span> <span class="nv">dict</span> <span class="o">=</span> <span class="nv">Nothing</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="nv">Sub</span> <span class="nv">JedeNteZeile</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">OutRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">xInterval</span> <span class="nv">As</span> <span class="nv">Integer</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range :</span><span class="s2">&quot;</span>, <span class="nv">InputRng</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">xInterval</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Jede wievielte Zeile selektieren?</span><span class="s2">&quot;</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">1</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">InputRng</span>.<span class="nv">Rows</span>.<span class="nv">Count</span> <span class="nv">Step</span> <span class="nv">xInterval</span> <span class="s1">&#39;</span><span class="s"> + 1</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">InputRng</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">OutRng</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">rng</span>
+<span class="k">Else</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Union</span><span class="ss">(</span><span class="nv">OutRng</span>, <span class="nv">rng</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="nv">OutRng</span>.<span class="nv">EntireRow</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="nv">Sub</span> <span class="nv">JedeNteSpalte</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">OutRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">xInterval</span> <span class="nv">As</span> <span class="nv">Integer</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range :</span><span class="s2">&quot;</span>, <span class="nv">InputRng</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">xInterval</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Jede wievielte Spalte selektieren</span><span class="s2">&quot;</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">1</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">InputRng</span>.<span class="nv">Columns</span>.<span class="nv">Count</span> <span class="nv">Step</span> <span class="nv">xInterval</span> <span class="s1">&#39;</span><span class="s"> + 1</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">InputRng</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="nv">i</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">OutRng</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">rng</span>
+<span class="k">Else</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Union</span><span class="ss">(</span><span class="nv">OutRng</span>, <span class="nv">rng</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="nv">OutRng</span>.<span class="nv">EntireColumn</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Prüfen, ob eine Datei existiert</span>
+<span class="nv">Public</span> <span class="nv">Function</span> <span class="nv">MyFileExists</span><span class="ss">(</span><span class="nv">MyFilePath</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Boolean</span>
+<span class="nv">Dim</span> <span class="nv">objFSO</span> <span class="nv">As</span> <span class="nv">Object</span>
+<span class="nv">Set</span> <span class="nv">objFSO</span> <span class="o">=</span> <span class="nv">CreateObject</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Scripting.FileSystemObject</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">MyFileExists</span> <span class="o">=</span> <span class="nv">objFSO</span>.<span class="nv">FileExists</span><span class="ss">(</span><span class="nv">MyFilePath</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">objFSO</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+
+<span class="nv">Sub</span> <span class="nv">xusername</span><span class="ss">()</span>
+<span class="nv">MsgBox</span> <span class="nv">Application</span>.<span class="nv">UserName</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="mi">13</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">Application</span>.<span class="nv">UserName</span><span class="ss">)</span>
+
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">, Bertrandt</span><span class="s2">&quot;</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="mi">13</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Len</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">, Bertrandt</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="nv">blaenge</span> <span class="o">=</span> <span class="nv">Len</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">, Bertrandt</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="nv">neuername</span> <span class="o">=</span> <span class="nv">Left</span><span class="ss">(</span><span class="nv">Application</span>.<span class="nv">UserName</span>, <span class="nv">Len</span><span class="ss">(</span><span class="nv">Application</span>.<span class="nv">UserName</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">blaenge</span><span class="ss">)</span>
+
+<span class="nv">MsgBox</span> <span class="nv">neuername</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="mi">13</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">neuername</span><span class="ss">)</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="nv">benutzer</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">UserName</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Worksheet_SelectionChange</span>
+<span class="s1">&#39;</span><span class="s">In diesem Beispiel wird der Inhalt des Arbeitsmappenfenster verschoben, bis sich die Markierung in der oberen linken Ecke des Fensters befindet.</span>
+
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">Worksheet_SelectionChange</span><span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">Target</span> <span class="nv">As</span> <span class="nv">Range</span><span class="ss">)</span> 
+<span class="nv">With</span> <span class="nv">ActiveWindow</span> 
+.<span class="nv">ScrollRow</span> <span class="o">=</span> <span class="nv">Target</span>.<span class="nv">Row</span> 
+.<span class="nv">ScrollColumn</span> <span class="o">=</span> <span class="nv">Target</span>.<span class="nv">Column</span> 
+<span class="k">End</span> <span class="nv">With</span> 
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">MonthView1_DateClick</span><span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">DateClicked</span> <span class="nv">As</span> <span class="nv">Date</span><span class="ss">)</span>
+<span class="nv">On</span> <span class="nv">Error</span> <span class="nv">Resume</span> <span class="k">Next</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">DateClicked</span>
+<span class="nv">Unload</span> <span class="nv">Me</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Doppelklick in Zelle-Ereignis</span>
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">Worksheet_BeforeDoubleClick</span><span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">Target</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">Cancel</span> <span class="nv">As</span> <span class="nv">Boolean</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">Intersect</span><span class="ss">(</span><span class="nv">Target</span>, <span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A3:A25, A29:A40, F3:F37, K3:K40, P3:P40</span><span class="s2">&quot;</span><span class="ss">))</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">UserFormKalender</span>.<span class="k">Show</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="k">If</span> <span class="nv">Target</span>.<span class="nv">Column</span> <span class="o">=</span> <span class="mi">9</span> <span class="nv">Or</span> <span class="nv">Target</span>.<span class="nv">Column</span> <span class="o">=</span> <span class="mi">10</span> <span class="k">Then</span>
+<span class="nv">UserFormKalender</span>.<span class="k">Show</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">------------------------------</span>
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">Worksheet_Activate</span><span class="ss">()</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">------------------------------</span>
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">Worksheet_SelectionChange</span><span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">Target</span> <span class="nv">As</span> <span class="nv">Excel</span>.<span class="nv">Range</span><span class="ss">)</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">letzte Zeile finden</span>
+<span class="nv">letztezeile</span> <span class="o">=</span> <span class="nv">Sheets</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Tabelle1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Anzahl</span>
+<span class="nv">Dim</span> <span class="nv">iVal</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">iVal</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">WorksheetFunction</span>.<span class="nv">COUNTIF</span><span class="ss">(</span><span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1:A10</span><span class="s2">&quot;</span><span class="ss">)</span>,<span class="s2">&quot;</span><span class="s">Suchbegriff</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Hyperlinkmenü öffnen</span>
+<span class="nv">Application</span>.<span class="nv">Dialogs</span><span class="ss">(</span><span class="nv">xlDialogInsertHyperlink</span><span class="ss">)</span>.<span class="k">Show</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">PasteSpecial</span>
+<span class="nv">ws</span>.<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">C5:L19</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Copy</span>
+<span class="nv">wb</span>.<span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">PasteSpecial</span> <span class="nv">Paste</span>:<span class="o">=</span><span class="nv">xlPasteValues</span>
+<span class="nv">wb</span>.<span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">PasteSpecial</span> <span class="nv">Paste</span>:<span class="o">=</span><span class="nv">xlPasteFormats</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">&quot;Close&quot;-Schaltfläche disablen</span>
+<span class="nv">Private</span> <span class="nv">Declare</span> <span class="nv">Function</span> <span class="nv">FindWindow</span> <span class="nv">Lib</span> <span class="s2">&quot;</span><span class="s">user32</span><span class="s2">&quot;</span> <span class="nv">Alias</span> <span class="s2">&quot;</span><span class="s">FindWindowA</span><span class="s2">&quot;</span> <span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">lpClassName</span> <span class="nv">As</span> <span class="nv">String</span>, <span class="nv">ByVal</span> <span class="nv">lpWindowName</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Private</span> <span class="nv">Declare</span> <span class="nv">Function</span> <span class="nv">GetSystemMenu</span> <span class="nv">Lib</span> <span class="s2">&quot;</span><span class="s">user32</span><span class="s2">&quot;</span> <span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">hWnd</span> <span class="nv">As</span> <span class="nv">Long</span>, <span class="nv">ByVal</span> <span class="nv">bRevert</span> <span class="nv">As</span> <span class="nv">Long</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Private</span> <span class="nv">Declare</span> <span class="nv">Function</span> <span class="nv">DeleteMenu</span> <span class="nv">Lib</span> <span class="s2">&quot;</span><span class="s">user32</span><span class="s2">&quot;</span> <span class="ss">(</span><span class="nv">ByVal</span> <span class="nv">hMenu</span> <span class="nv">As</span> <span class="nv">Long</span>, <span class="nv">ByVal</span> <span class="nv">nPosition</span> <span class="nv">As</span> <span class="nv">Long</span>, <span class="nv">ByVal</span> <span class="nv">wFlags</span> <span class="nv">As</span> <span class="nv">Long</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Private</span> <span class="nv">Const</span> <span class="nv">SC_CLOSE</span> <span class="nv">As</span> <span class="nv">Long</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nv">HF060</span>
+
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">UserForm_Initialize</span><span class="ss">()</span>
+
+<span class="s1">&#39;</span><span class="s">Dim hWndForm As Long</span>
+<span class="s1">&#39;</span><span class="s">Dim hMenu As Long</span>
+<span class="s1">&#39;</span><span class="s">hWndForm = FindWindow(&quot;ThunderDFrame&quot;, Me.Caption) </span><span class="s1">&#39;</span><span class="nv">XL2000</span>
+<span class="s1">&#39;</span><span class="s">hMenu = GetSystemMenu(hWndForm, 0)</span>
+<span class="s1">&#39;</span><span class="s">DeleteMenu hMenu, SC_CLOSE, 0&amp;</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Werte eines Monats addieren</span>
+<span class="s1">&#39;</span><span class="s">Zeile (99) = Anzahl der Werte</span>
+{<span class="o">=</span><span class="nv">SUMME</span><span class="ss">(</span><span class="nv">WENN</span><span class="ss">(</span><span class="nv">MONAT</span><span class="ss">(</span><span class="mh">$B$2</span>:<span class="mh">$B$99</span><span class="ss">)</span><span class="o">=</span><span class="nv">MONAT</span><span class="ss">(</span>$<span class="nv">L2</span><span class="ss">)</span><span class="c1">;$E$2:$E$99))}</span>
+{<span class="o">=</span><span class="nv">SUMME</span><span class="ss">(</span><span class="nv">WENN</span><span class="ss">((</span><span class="nv">MONAT</span><span class="ss">(</span><span class="mh">$A$1</span>:<span class="nv">A6</span><span class="ss">)</span><span class="o">=</span><span class="nv">MONAT</span><span class="ss">(</span><span class="nv">D1</span><span class="ss">))</span><span class="o">*</span><span class="ss">(</span><span class="nv">JAHR</span><span class="ss">(</span><span class="mh">$A$1</span>:<span class="nv">A6</span><span class="ss">)</span><span class="o">=</span><span class="nv">JAHR</span><span class="ss">(</span><span class="nv">D1</span><span class="ss">))</span><span class="c1">;$B$1:B6))}</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="s1">&#39;</span><span class="s">Alle definierten Namen mit Bezügen auflisten</span>
+<span class="s1">&#39;</span><span class="s">Dieses kleine Makro listet alle definierten Namen und der dazugehörigen Bezüge in einem neuen Arbeitsblatt auf.</span>
+<span class="s1">&#39;</span><span class="s">Der Vollständigkeit halber - es geht auch schneller ohne Makro: Einfach F3 drücken und die Option &quot;Liste einfügen&quot; wählen.</span>
+
+<span class="nv">Sub</span> <span class="nv">MWExcelNamenAdresseAuflisten</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">oName</span> <span class="nv">As</span> <span class="nv">Object</span>
+<span class="nv">Dim</span> <span class="nv">oAusgabe</span> <span class="nv">As</span> <span class="nv">Object</span>
+<span class="nv">Dim</span> <span class="nv">z</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Set</span> <span class="nv">oAusgabe</span> <span class="o">=</span> <span class="nv">Sheets</span>.<span class="nv">Add</span>
+<span class="nv">z</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nv">oAusgabe</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Name</span><span class="s2">&quot;</span>
+<span class="nv">oAusgabe</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span><span class="ss">)</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Bereich</span><span class="s2">&quot;</span>
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">oName</span> <span class="nv">In</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Names</span>
+<span class="nv">oAusgabe</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">z</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">oName</span>.<span class="nv">Name</span>
+<span class="nv">oAusgabe</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">z</span>, <span class="mi">2</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Names</span>.<span class="nv">Item</span><span class="ss">(</span><span class="nv">oName</span>.<span class="nv">Name</span><span class="ss">)</span>
+<span class="nv">z</span> <span class="o">=</span> <span class="nv">z</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">Next</span> <span class="nv">oName</span>
+<span class="nv">Set</span> <span class="nv">oName</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="nv">Set</span> <span class="nv">oAusgabe</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="nv">Sub</span> <span class="nv">suchen</span><span class="ss">()</span> 
+<span class="nv">Dim</span> <span class="nv">wb</span> <span class="nv">As</span> <span class="nv">Workbook</span> 
+<span class="nv">Dim</span> <span class="nv">ws</span> <span class="nv">As</span> <span class="nv">Worksheet</span> 
+<span class="nv">Dim</span> <span class="nv">material</span> <span class="nv">As</span> <span class="nv">String</span> 
+<span class="nv">Dim</span> <span class="nv">c</span> <span class="nv">As</span> <span class="nv">Range</span>
+
+<span class="nv">material</span> <span class="o">=</span> <span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Bitte geben Sie eine Materialnummer ein: </span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="nv">Set</span> <span class="nv">wb</span> <span class="o">=</span> <span class="nv">Workbooks</span>.<span class="nv">Open</span><span class="ss">(</span><span class="nv">Filename</span>:<span class="o">=</span><span class="s2">&quot;</span><span class="s">D:\Documents\Documents\uni\master-thesis\Prognose\probe\Materialverbrauch_probe</span><span class="s2">&quot;</span><span class="ss">)</span> 
+<span class="nv">Set</span> <span class="nv">ws</span> <span class="o">=</span> <span class="nv">wb</span>.<span class="nv">Worksheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>
+
+<span class="nv">Set</span> <span class="nv">c</span> <span class="o">=</span> <span class="nv">ws</span>.<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A:A</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Find</span><span class="ss">(</span><span class="nv">material</span>, <span class="nv">LookIn</span>:<span class="o">=</span><span class="nv">xlValues</span>, <span class="nv">LookAt</span>:<span class="o">=</span><span class="nv">xlWhole</span><span class="ss">)</span> 
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">c</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span> 
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">Wert ist vorhanden in der Zeile </span><span class="s2">&quot;</span> <span class="o">&amp;</span> <span class="nv">c</span>.<span class="nv">Row</span> 
+<span class="k">Else</span> 
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">Wert ist nicht vorhanden!</span><span class="s2">&quot;</span> 
+<span class="k">End</span> <span class="k">If</span> 
+<span class="nv">wb</span>.<span class="nv">Close</span> <span class="nv">savechanges</span>:<span class="o">=</span><span class="nv">False</span> 
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="s1">&#39;</span><span class="s">Letzte Zeile, letzte Spalte und letzte Zelle per VBA ermitteln </span>
+<span class="s1">&#39;</span><span class="s">Version 1a Ermittlung der letzten Zeile:</span>
+<span class="nv">Public</span> <span class="nv">Sub</span> <span class="nv">letzte_zeile_1</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">Hier wird die letzte Zeile ermittelt</span>
+<span class="s1">&#39;</span><span class="s">Egal in welcher Spalte sich die letzte Zeile befindet</span>
+<span class="s1">&#39;</span><span class="s">Es werden alle Spalten geprüft und die letzte Zeile ausgegeben</span>
+<span class="nv">letztezeile</span> <span class="o">=</span> <span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">UsedRange</span>.<span class="nv">SpecialCells</span><span class="ss">(</span><span class="nv">xlCellTypeLastCell</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="nv">MsgBox</span> <span class="nv">letztezeile</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Version</span> <span class="mi">1</span><span class="nv">b</span>: <span class="nv">Ermittlung</span> <span class="nv">letzte</span> <span class="nv">Zeile</span> <span class="nv">in</span> <span class="nv">Spalte</span> <span class="nv">A</span>
+<span class="nv">Public</span> <span class="nv">Sub</span> <span class="nv">letzte_zeile_2</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">Hier wir die letzte Zeile der Spalte A ermittelt</span>
+<span class="s1">&#39;</span><span class="s">letztezeile = ActiveSheet.Cells(65536, 1).End(xlUp).Row </span><span class="s1">&#39;</span><span class="nv">Bis</span> <span class="nv">Excel</span> <span class="mi">2003</span>
+<span class="nv">letztezeile</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1048576</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span> <span class="s1">&#39;</span><span class="s">Ab Excel 2007</span>
+<span class="nv">MsgBox</span> <span class="nv">letztezeile</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="s1">&#39;</span><span class="s">Version 1c: Ermittlung der letzten Zeile in Spalte A (Wird bei Excel-Inside als Standardversion verwendet, da damit eine Versionsunabhängige Funktionsweise garantiert ist)</span>
+<span class="nv">Public</span> <span class="nv">Sub</span> <span class="nv">letzte_zeile_3</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">Hier wir die letzte Zeile der Spalte A ermittelt</span>
+<span class="nv">letztezeile</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="nv">MsgBox</span> <span class="nv">letztezeile</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="s1">&#39;</span><span class="s">Version 1d: Ermittlung der letzten Zeile im benutzten Bereich</span>
+<span class="nv">Public</span> <span class="nv">Sub</span> <span class="nv">letzte_spalte_1</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">Hier wird die letzte Zeile ermittelt</span>
+<span class="s1">&#39;</span><span class="s">Egal in welcher Spalte sich die letzte Zeile befindet</span>
+<span class="s1">&#39;</span><span class="s">Es werden alle Spalten geprüft und die letzte Zeile ausgegeben</span>
+<span class="nv">letztespalte</span> <span class="o">=</span> <span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">UsedRange</span>.<span class="nv">SpecialCells</span><span class="ss">(</span><span class="nv">xlCellTypeLastCell</span><span class="ss">)</span>.<span class="nv">Column</span>
+<span class="nv">MsgBox</span> <span class="nv">letztespalte</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="o">--------------------------------------------------------------------------------</span>
+<span class="nv">Sub</span> <span class="nv">letztespaltefinden</span><span class="ss">()</span>
+<span class="nv">letztespalte</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">16384</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlToLeft</span><span class="ss">)</span>.<span class="nv">Column</span>
+<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="nv">letztespalte</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">MsgBox</span> <span class="nv">letztespalte</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="o">--------------------------------------------------------------------------------</span>
+
+<span class="nv">Sub</span> <span class="nv">find_next_in_col</span><span class="ss">()</span>
+<span class="nv">Set</span> <span class="nv">nexter</span> <span class="o">=</span> <span class="nv">Columns</span><span class="ss">(</span><span class="nv">ActiveCell</span>.<span class="nv">Column</span><span class="ss">)</span>.<span class="nv">Find</span><span class="ss">(</span><span class="nv">ActiveCell</span>.<span class="nv">Value</span>, <span class="nv">After</span>:<span class="o">=</span><span class="nv">Range</span><span class="ss">(</span><span class="nv">ActiveCell</span>.<span class="nv">Address</span><span class="ss">))</span>
+<span class="nv">nexter</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Public</span> <span class="nv">Function</span> <span class="nv">status_bar</span><span class="ss">(</span><span class="nv">s</span> <span class="nv">As</span> <span class="nv">String</span>, <span class="nv">t</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span>
+<span class="nv">Application</span>.<span class="nv">StatusBar</span> <span class="o">=</span> <span class="nv">s</span>
+<span class="s1">&#39;</span><span class="s"> Wait for 10 seconds.</span>
+<span class="nv">Application</span>.<span class="k">Wait</span> <span class="ss">(</span><span class="nv">Now</span> <span class="o">+</span> <span class="nv">TimeValue</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">0:00:</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">t</span><span class="ss">))</span>
+<span class="nv">Application</span>.<span class="nv">StatusBar</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+
+<span class="nv">Sub</span> <span class="nv">Uppercase</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">GROSS SCHREIBEN</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">cell</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">Selection</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rng</span>
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">cell</span>.<span class="nv">HasFormula</span> <span class="k">Then</span>
+<span class="nv">cell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">UCase</span><span class="ss">(</span><span class="nv">cell</span>.<span class="nv">Value</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">cell</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Lowercase</span><span class="ss">()</span>
+<span class="s1">&#39;</span><span class="s">klein schreiben</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">cell</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">Selection</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rng</span>
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">cell</span>.<span class="nv">HasFormula</span> <span class="k">Then</span>
+<span class="nv">cell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">LCase</span><span class="ss">(</span><span class="nv">cell</span>.<span class="nv">Value</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">cell</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Propercase</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">cell</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">Selection</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rng</span>
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">cell</span>.<span class="nv">HasFormula</span> <span class="k">Then</span>
+<span class="nv">cell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">WorksheetFunction</span>.<span class="nv">Proper</span><span class="ss">(</span><span class="nv">cell</span>.<span class="nv">Value</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">cell</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">berechnung_umstellen</span><span class="ss">()</span>
+
+<span class="nv">aktuell</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Calculation</span>
+
+<span class="k">If</span> <span class="nv">aktuell</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4105</span> <span class="k">Then</span>
+<span class="nv">Application</span>.<span class="nv">Calculation</span> <span class="o">=</span> <span class="nv">xlManual</span> <span class="s1">&#39;</span><span class="s">-4135</span>
+<span class="k">Else</span>
+<span class="nv">Application</span>.<span class="nv">Calculation</span> <span class="o">=</span> <span class="nv">xlAutomatic</span> <span class="s1">&#39;</span><span class="s">-4105</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">sort2lists</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">InputRng1</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng2</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="s1">&#39;</span><span class="s">Dim InputStartRow As Integer</span>
+
+<span class="nv">On</span> <span class="nv">Error</span> <span class="k">GoTo</span> <span class="nl">Endealles</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng1</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng1</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 1:</span><span class="s2">&quot;</span>, <span class="nv">InputRng1</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng2</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng2</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 2:</span><span class="s2">&quot;</span>, <span class="nv">InputRng2</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="nv">Dim</span> <span class="nv">InputStartRow</span> <span class="nv">As</span> <span class="nv">Variant</span>
+<span class="nv">InputStartRow</span> <span class="o">=</span> <span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Ab Zeile:</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">Eingabe</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="nv">With</span> <span class="nv">ActiveSheet</span>
+<span class="nv">lastrow1</span> <span class="o">=</span> .<span class="nv">Cells</span><span class="ss">(</span>.<span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="nv">InputRng1</span>.<span class="nv">Column</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="nv">lastrow2</span> <span class="o">=</span> .<span class="nv">Cells</span><span class="ss">(</span>.<span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="nv">InputRng2</span>.<span class="nv">Column</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="k">End</span> <span class="nv">With</span>
+
+<span class="nv">abstandspalten</span> <span class="o">=</span> <span class="nv">InputRng2</span>.<span class="nv">Column</span> <span class="o">-</span> <span class="nv">InputRng1</span>.<span class="nv">Column</span>
+
+<span class="k">If</span> <span class="nv">lastrow1</span> <span class="o">&gt;</span> <span class="nv">lastrow2</span> <span class="k">Then</span>
+<span class="nv">lastrow</span> <span class="o">=</span> <span class="nv">lastrow1</span>
+<span class="k">Else</span>
+<span class="nv">lastrow</span> <span class="o">=</span> <span class="nv">lastrow2</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="nv">Set</span> <span class="nv">rng1</span> <span class="o">=</span> <span class="nv">Range</span><span class="ss">(</span><span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="nv">InputRng1</span>.<span class="nv">Column</span><span class="ss">)</span>, <span class="nv">Cells</span><span class="ss">(</span><span class="nv">lastrow1</span>, <span class="nv">InputRng1</span>.<span class="nv">Column</span><span class="ss">))</span>
+<span class="nv">Set</span> <span class="nv">rng2</span> <span class="o">=</span> <span class="nv">Range</span><span class="ss">(</span><span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="nv">InputRng2</span>.<span class="nv">Column</span><span class="ss">)</span>, <span class="nv">Cells</span><span class="ss">(</span><span class="nv">lastrow2</span>, <span class="nv">InputRng2</span>.<span class="nv">Column</span><span class="ss">))</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rng1</span>
+<span class="k">If</span> <span class="nv">Not</span> <span class="nv">cell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">rgFound</span> <span class="o">=</span> <span class="nv">rng2</span>.<span class="nv">Find</span><span class="ss">(</span><span class="nv">cell</span>.<span class="nv">Value</span><span class="ss">)</span>
+
+<span class="k">If</span> <span class="nv">rgFound</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">cell</span>.<span class="nv">Resize</span><span class="ss">(</span>, <span class="nv">InputRng2</span>.<span class="nv">Columns</span>.<span class="nv">Count</span><span class="ss">)</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="nv">abstandspalten</span><span class="ss">)</span>.<span class="nv">Insert</span> <span class="nv">Shift</span>:<span class="o">=</span><span class="nv">xlDown</span>, <span class="nv">CopyOrigin</span>:<span class="o">=</span><span class="nv">xlFormatFromLeftOrAbove</span>
+<span class="k">Else</span>
+<span class="nv">abstand</span> <span class="o">=</span> <span class="nv">rgFound</span>.<span class="nv">Row</span> <span class="o">-</span> <span class="nv">cell</span>.<span class="nv">Row</span>
+<span class="k">If</span> <span class="nv">abstand</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+<span class="nv">cell</span>.<span class="nv">Resize</span><span class="ss">(</span><span class="nv">abstand</span>, <span class="nv">InputRng1</span>.<span class="nv">Columns</span>.<span class="nv">Count</span><span class="ss">)</span>.<span class="nv">Insert</span> <span class="nv">Shift</span>:<span class="o">=</span><span class="nv">xlDown</span>, <span class="nv">CopyOrigin</span>:<span class="o">=</span><span class="nv">xlFormatFromLeftOrAbove</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="nv">Endealles</span>:
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Swap2Cells</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">beide</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">AddressArray</span><span class="ss">()</span> <span class="nv">As</span> <span class="nv">String</span>
+
+<span class="nv">beide</span> <span class="o">=</span> <span class="nv">Selection</span>.<span class="nv">Address</span>
+<span class="nv">AddressArray</span><span class="ss">()</span> <span class="o">=</span> <span class="nv">Split</span><span class="ss">(</span><span class="nv">beide</span>, <span class="s2">&quot;</span><span class="s">,</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="nv">part1</span> <span class="o">=</span> <span class="nv">Range</span><span class="ss">(</span><span class="nv">AddressArray</span><span class="ss">(</span><span class="mi">0</span><span class="ss">))</span>.<span class="nv">Value</span>
+<span class="nv">part2</span> <span class="o">=</span> <span class="nv">Range</span><span class="ss">(</span><span class="nv">AddressArray</span><span class="ss">(</span><span class="mi">1</span><span class="ss">))</span>.<span class="nv">Value</span>
+
+<span class="nv">Range</span><span class="ss">(</span><span class="nv">AddressArray</span><span class="ss">(</span><span class="mi">0</span><span class="ss">))</span> <span class="o">=</span> <span class="nv">part2</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="nv">AddressArray</span><span class="ss">(</span><span class="mi">1</span><span class="ss">))</span> <span class="o">=</span> <span class="nv">part1</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">SuchenErsetzen</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">sTxtSuchen</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">sTxtNeu</span> <span class="nv">As</span> <span class="nv">String</span>
+
+<span class="nv">sTxtSuchen</span> <span class="o">=</span> <span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Zu suchenden Text eingeben:</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="s1">&#39;</span><span class="s">If sTxtSuchen = &quot;&quot; Then Exit Sub</span>
+
+<span class="nv">sTxtNeu</span> <span class="o">=</span> <span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Neuen Text eingeben:</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="s1">&#39;</span><span class="s">If sTxtNeu = &quot;&quot; Then Exit Sub</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range :</span><span class="s2">&quot;</span>, <span class="nv">InputRng</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">InputRng</span>.<span class="nv">Select</span>
+
+<span class="nv">Selection</span>.<span class="nv">Replace</span> <span class="nv">what</span>:<span class="o">=</span><span class="nv">sTxtSuchen</span>, <span class="nv">Replacement</span>:<span class="o">=</span><span class="nv">sTxtNeu</span>, <span class="nv">Lookat</span>:<span class="o">=</span><span class="nv">xlWhole</span>, <span class="nv">SearchOrder</span>:<span class="o">=</span><span class="nv">xlByRows</span>, <span class="nv">MatchCase</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">SearchFormat</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">ReplaceFormat</span>:<span class="o">=</span><span class="nv">False</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">JedeNteZeile</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">OutRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">yInterval</span> <span class="nv">As</span> <span class="nv">Integer</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range :</span><span class="s2">&quot;</span>, <span class="nv">InputRng</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">yInterval</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Jede wievielte Zeile selektieren?</span><span class="s2">&quot;</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">1</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="nv">yInterval</span> <span class="nv">To</span> <span class="nv">InputRng</span>.<span class="nv">Rows</span>.<span class="nv">Count</span> <span class="nv">Step</span> <span class="nv">yInterval</span> <span class="s1">&#39;</span><span class="s"> + 1</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">InputRng</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">OutRng</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">rng</span>
+<span class="k">Else</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Union</span><span class="ss">(</span><span class="nv">OutRng</span>, <span class="nv">rng</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="nv">OutRng</span>.<span class="nv">EntireRow</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">JedeNteSpalte</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">OutRng</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">xInterval</span> <span class="nv">As</span> <span class="nv">Integer</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range :</span><span class="s2">&quot;</span>, <span class="nv">InputRng</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">xInterval</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Jede wievielte Spalte selektieren</span><span class="s2">&quot;</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">1</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="nv">xInterval</span> <span class="nv">To</span> <span class="nv">InputRng</span>.<span class="nv">Columns</span>.<span class="nv">Count</span> <span class="nv">Step</span> <span class="nv">xInterval</span> <span class="s1">&#39;</span><span class="s"> + 1</span>
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">InputRng</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="mi">1</span>, <span class="nv">i</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">OutRng</span> <span class="nv">Is</span> <span class="nv">Nothing</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">rng</span>
+<span class="k">Else</span>
+<span class="nv">Set</span> <span class="nv">OutRng</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Union</span><span class="ss">(</span><span class="nv">OutRng</span>, <span class="nv">rng</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="nv">OutRng</span>.<span class="nv">EntireColumn</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">SortiereSheets1</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">WS</span> <span class="nv">As</span> <span class="nv">Worksheet</span>
+<span class="nv">Dim</span> <span class="nv">x</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">y</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Set</span> <span class="nv">WS</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>
+<span class="k">For</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Worksheets</span>.<span class="nv">Count</span>
+<span class="k">For</span> <span class="nv">y</span> <span class="o">=</span> <span class="nv">x</span> <span class="nv">To</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Worksheets</span>.<span class="nv">Count</span>
+<span class="k">If</span> <span class="nv">UCase</span><span class="ss">(</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>.<span class="nv">Name</span><span class="ss">)</span> <span class="o">&lt;</span> <span class="nv">UCase</span><span class="ss">(</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>.<span class="nv">Name</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>.<span class="nv">Move</span> <span class="nv">Before</span>:<span class="o">=</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">y</span>
+<span class="k">Next</span> <span class="nv">x</span>
+<span class="nv">WS</span>.<span class="nv">Activate</span>
+<span class="nv">Set</span> <span class="nv">WS</span> <span class="o">=</span> <span class="nv">Nothing</span>
+
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">SortiereSheets2</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">WS</span> <span class="nv">As</span> <span class="nv">Worksheet</span>
+<span class="nv">Dim</span> <span class="nv">x</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">y</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Set</span> <span class="nv">WS</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>
+<span class="k">For</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Worksheets</span>.<span class="nv">Count</span>
+<span class="k">For</span> <span class="nv">y</span> <span class="o">=</span> <span class="nv">x</span> <span class="nv">To</span> <span class="nv">ActiveWorkbook</span>.<span class="nv">Worksheets</span>.<span class="nv">Count</span>
+<span class="k">If</span> <span class="nv">UCase</span><span class="ss">(</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>.<span class="nv">Name</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="nv">UCase</span><span class="ss">(</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>.<span class="nv">Name</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>.<span class="nv">Move</span> <span class="nv">Before</span>:<span class="o">=</span><span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">y</span>
+<span class="k">Next</span> <span class="nv">x</span>
+<span class="nv">WS</span>.<span class="nv">Activate</span>
+<span class="nv">Set</span> <span class="nv">WS</span> <span class="o">=</span> <span class="nv">Nothing</span>
+
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">ListFilesoeffnen</span><span class="ss">()</span>
+<span class="nv">ufListFiles</span>.<span class="k">Show</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">zelle_nach_links_verschieben</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Cut</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="o">-</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Paste</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">zelle_nach_rechts_verschieben</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Cut</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Paste</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Zelle_nach_unten_verschieben</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Cut</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Paste</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Zelle_nach_oben_verschieben</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Cut</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Paste</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">zellen_einf</span>ü<span class="nv">gen</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Insert</span> <span class="nv">Shift</span>:<span class="o">=</span><span class="nv">xlDown</span>, <span class="nv">CopyOrigin</span>:<span class="o">=</span><span class="nv">xlFormatFromLeftOrAbove</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">zellen_loschen</span><span class="ss">()</span>
+<span class="nv">Selection</span>.<span class="nv">Delete</span> <span class="nv">Shift</span>:<span class="o">=</span><span class="nv">xlUp</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">streifenmachen</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="nv">Dim</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>
+
+<span class="nv">Set</span> <span class="nv">rng</span> <span class="o">=</span> <span class="nv">Selection</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">ListObjects</span>.<span class="nv">Add</span><span class="ss">(</span><span class="nv">xlSrcRange</span>, <span class="nv">rng</span>, , <span class="nv">xlYes</span><span class="ss">)</span>.<span class="nv">Name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">tempTabelle</span><span class="s2">&quot;</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">tempTabelle[#All]</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">ListObjects</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">tempTabelle</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">TableStyle</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">TableStyleLight2</span><span class="s2">&quot;</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">ListObjects</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">tempTabelle</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Unlist</span>
+<span class="nv">With</span> <span class="nv">Selection</span>.<span class="nv">Font</span>
+.<span class="nv">ColorIndex</span> <span class="o">=</span> <span class="nv">xlAutomatic</span>
+.<span class="nv">TintAndShade</span> <span class="o">=</span> <span class="mi">0</span>
+.<span class="nv">Bold</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="k">End</span> <span class="nv">With</span>
+
+<span class="nv">Selection</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">2</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">numRows</span> <span class="o">=</span> <span class="nv">Selection</span>.<span class="nv">Rows</span>.<span class="nv">Count</span>
+<span class="nv">numColumns</span> <span class="o">=</span> <span class="nv">Selection</span>.<span class="nv">Columns</span>.<span class="nv">Count</span>
+<span class="nv">Selection</span>.<span class="nv">Resize</span><span class="ss">(</span><span class="mi">2</span>, <span class="nv">numColumns</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">Selection</span>.<span class="nv">Copy</span>
+<span class="nv">Selection</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="o">-</span><span class="mi">2</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">PasteSpecial</span> <span class="nv">Paste</span>:<span class="o">=</span><span class="nv">xlPasteFormats</span>, <span class="nv">Operation</span>:<span class="o">=</span><span class="nv">xlNone</span>
+<span class="nv">Application</span>.<span class="nv">CutCopyMode</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="nv">Selection</span>.<span class="nv">Resize</span><span class="ss">(</span><span class="nv">numRows</span>, <span class="nv">numColumns</span><span class="ss">)</span>.<span class="nv">Select</span>
+
+<span class="nv">With</span> <span class="nv">Selection</span>
+.<span class="nv">HorizontalAlignment</span> <span class="o">=</span> <span class="nv">xlLeft</span>
+.<span class="nv">VerticalAlignment</span> <span class="o">=</span> <span class="nv">xlBottom</span>
+.<span class="nv">WrapText</span> <span class="o">=</span> <span class="nv">False</span>
+.<span class="nv">Orientation</span> <span class="o">=</span> <span class="mi">0</span>
+.<span class="nv">AddIndent</span> <span class="o">=</span> <span class="nv">False</span>
+.<span class="nv">IndentLevel</span> <span class="o">=</span> <span class="mi">0</span>
+.<span class="nv">ShrinkToFit</span> <span class="o">=</span> <span class="nv">False</span>
+.<span class="nv">ReadingOrder</span> <span class="o">=</span> <span class="nv">xlContext</span>
+.<span class="nv">MergeCells</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="k">End</span> <span class="nv">With</span>
+
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">leere_Zeilen_loeschen</span><span class="ss">()</span>
+<span class="nv">rng</span> <span class="o">=</span> <span class="nv">Selection</span>.<span class="nv">Rows</span>.<span class="nv">Count</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">rng</span>
+<span class="k">If</span> <span class="nv">ActiveCell</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="k">Then</span>
+<span class="nv">Selection</span>.<span class="nv">EntireRow</span>.<span class="nv">Delete</span>
+<span class="k">Else</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">0</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">i</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">JoinText</span><span class="ss">()</span>
+<span class="nv">myCol</span> <span class="o">=</span> <span class="nv">Selection</span>.<span class="nv">Columns</span>.<span class="nv">Count</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">myCol</span>
+<span class="nv">ActiveCell</span> <span class="o">=</span> <span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="mi">0</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="nv">i</span><span class="ss">)</span>
+<span class="nv">ActiveCell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="nv">i</span><span class="ss">)</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">Next</span> <span class="nv">i</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">SelectUsedRange</span><span class="ss">()</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">UsedRange</span>.<span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">JaNein</span><span class="ss">()</span>
+<span class="nv">YesNo</span> <span class="o">=</span> <span class="nv">MsgBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Ja oder Nein?</span><span class="s2">&quot;</span>, <span class="nv">vbYesNo</span> <span class="o">+</span> <span class="nv">vbCritical</span>, <span class="s2">&quot;</span><span class="s">Ja oder doch lieber Nein?</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">Select</span> <span class="nv">Case</span> <span class="nv">YesNo</span>
+<span class="nv">Case</span> <span class="nv">vbYes</span>
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">Jap</span><span class="s2">&quot;</span> <span class="s1">&#39;</span><span class="s">Insert your code here if Yes is clicked</span>
+<span class="nv">Case</span> <span class="nv">vbNo</span>
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">Nope</span><span class="s2">&quot;</span> <span class="s1">&#39;</span><span class="s">Insert your code here if No is clicked</span>
+<span class="k">End</span> <span class="nv">Select</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Multi_Ersetzen</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">rngWo</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">rngWas</span> <span class="nv">As</span> <span class="nv">Range</span>
+
+<span class="s1">&#39;&#39;</span><span class="nv">Wenn</span> <span class="nv">Bereiche</span> <span class="nv">immer</span> <span class="nv">gleich</span>:
+<span class="s1">&#39;</span><span class="s">Set rngWo = Range(&quot;C2&quot;)</span>
+<span class="s1">&#39;</span><span class="s">Set rngWas = Range(&quot;A2:A13&quot;)</span>
+
+<span class="nv">Set</span> <span class="nv">rngWo</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">rngWo</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Wo suchen?:</span><span class="s2">&quot;</span>, <span class="nv">rngWo</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="nv">Set</span> <span class="nv">rngWas</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">rngWas</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Was ersetzen?:</span><span class="s2">&quot;</span>, <span class="nv">rngWas</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rngWas</span>
+<span class="nv">rngWo</span>.<span class="nv">Replace</span> <span class="nv">what</span>:<span class="o">=</span><span class="nv">cell</span>.<span class="nv">Value</span>, <span class="nv">Replacement</span>:<span class="o">=</span><span class="nv">cell</span>.<span class="nv">Offset</span><span class="ss">(</span><span class="mi">0</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="nv">Value</span>, <span class="nv">Lookat</span>:<span class="o">=</span> <span class="nv">_</span>
+<span class="nv">xlPart</span>, <span class="nv">SearchOrder</span>:<span class="o">=</span><span class="nv">xlByRows</span>, <span class="nv">MatchCase</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">SearchFormat</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">ReplaceFormat</span>:<span class="o">=</span><span class="nv">False</span>
+<span class="k">Next</span> <span class="nv">cell</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">txtFilesToTabs</span><span class="ss">()</span>
+<span class="nv">Dim</span> <span class="nv">FilesToOpen</span>
+<span class="nv">Dim</span> <span class="nv">x</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">wkbAll</span> <span class="nv">As</span> <span class="nv">Workbook</span>
+<span class="nv">Dim</span> <span class="nv">wkbTemp</span> <span class="nv">As</span> <span class="nv">Workbook</span>
+<span class="nv">Dim</span> <span class="nv">sDelimiter</span> <span class="nv">As</span> <span class="nv">String</span>
+
+<span class="nv">On</span> <span class="nv">Error</span> <span class="k">GoTo</span> <span class="nl">ErrHandler</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">sDelimiter</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">|</span><span class="s2">&quot;</span>
+
+<span class="nv">FilesToOpen</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">GetOpenFilename</span> <span class="nv">_</span>
+<span class="ss">(</span><span class="nv">FileFilter</span>:<span class="o">=</span><span class="s2">&quot;</span><span class="s">Text Files (*.txt), *.txt</span><span class="s2">&quot;</span>, <span class="nv">_</span>
+<span class="nv">MultiSelect</span>:<span class="o">=</span><span class="nv">True</span>, <span class="nv">Title</span>:<span class="o">=</span><span class="s2">&quot;</span><span class="s">Text Files to Open</span><span class="s2">&quot;</span><span class="ss">)</span>
+
+<span class="k">If</span> <span class="nv">TypeName</span><span class="ss">(</span><span class="nv">FilesToOpen</span><span class="ss">)</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Boolean</span><span class="s2">&quot;</span> <span class="k">Then</span>
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">No Files were selected</span><span class="s2">&quot;</span>
+<span class="k">GoTo</span> <span class="nl">ExitHandler</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="nv">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nv">Set</span> <span class="nv">wkbTemp</span> <span class="o">=</span> <span class="nv">Workbooks</span>.<span class="nv">Open</span><span class="ss">(</span><span class="nv">FileName</span>:<span class="o">=</span><span class="nv">FilesToOpen</span><span class="ss">(</span><span class="nv">x</span><span class="ss">))</span>
+<span class="nv">wkbTemp</span>.<span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">Copy</span>
+<span class="nv">Set</span> <span class="nv">wkbAll</span> <span class="o">=</span> <span class="nv">ActiveWorkbook</span>
+<span class="nv">wkbTemp</span>.<span class="nv">Close</span> <span class="ss">(</span><span class="nv">False</span><span class="ss">)</span>
+<span class="nv">wkbAll</span>.<span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>.<span class="nv">Columns</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A:A</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">TextToColumns</span> <span class="nv">_</span>
+<span class="nv">Destination</span>:<span class="o">=</span><span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>, <span class="nv">DataType</span>:<span class="o">=</span><span class="nv">xlDelimited</span>, <span class="nv">_</span>
+<span class="nv">TextQualifier</span>:<span class="o">=</span><span class="nv">xlDoubleQuote</span>, <span class="nv">_</span>
+<span class="nv">ConsecutiveDelimiter</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Tab</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">Semicolon</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Comma</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">Space</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Other</span>:<span class="o">=</span><span class="nv">True</span>, <span class="nv">OtherChar</span>:<span class="o">=</span><span class="s2">&quot;</span><span class="s">|</span><span class="s2">&quot;</span>
+<span class="nv">x</span> <span class="o">=</span> <span class="nv">x</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">While</span> <span class="nv">x</span> <span class="o">&lt;=</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">FilesToOpen</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">wkbTemp</span> <span class="o">=</span> <span class="nv">Workbooks</span>.<span class="nv">Open</span><span class="ss">(</span><span class="nv">FileName</span>:<span class="o">=</span><span class="nv">FilesToOpen</span><span class="ss">(</span><span class="nv">x</span><span class="ss">))</span>
+<span class="nv">With</span> <span class="nv">wkbAll</span>
+<span class="nv">wkbTemp</span>.<span class="nv">Sheets</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>.<span class="nv">Move</span> <span class="nv">After</span>:<span class="o">=</span>.<span class="nv">Sheets</span><span class="ss">(</span>.<span class="nv">Sheets</span>.<span class="nv">Count</span><span class="ss">)</span>
+.<span class="nv">Worksheets</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>.<span class="nv">Columns</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A:A</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">TextToColumns</span> <span class="nv">_</span>
+<span class="nv">Destination</span>:<span class="o">=</span><span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>, <span class="nv">DataType</span>:<span class="o">=</span><span class="nv">xlDelimited</span>, <span class="nv">_</span>
+<span class="nv">TextQualifier</span>:<span class="o">=</span><span class="nv">xlDoubleQuote</span>, <span class="nv">_</span>
+<span class="nv">ConsecutiveDelimiter</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Tab</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">Semicolon</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Comma</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">Space</span>:<span class="o">=</span><span class="nv">False</span>, <span class="nv">_</span>
+<span class="nv">Other</span>:<span class="o">=</span><span class="nv">True</span>, <span class="nv">OtherChar</span>:<span class="o">=</span><span class="nv">sDelimiter</span>
+<span class="k">End</span> <span class="nv">With</span>
+<span class="nv">x</span> <span class="o">=</span> <span class="nv">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nv">Wend</span>
+
+<span class="nv">ExitHandler</span>:
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="nv">Set</span> <span class="nv">wkbAll</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="nv">Set</span> <span class="nv">wkbTemp</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="k">Exit</span> <span class="nv">Sub</span>
+
+<span class="nv">ErrHandler</span>:
+<span class="nv">MsgBox</span> <span class="nv">Err</span>.<span class="nv">Description</span>
+<span class="nv">Resume</span> <span class="nv">ExitHandler</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">Looptest</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">EnableCancelKey</span> <span class="o">=</span> <span class="nv">xlErrorHandler</span>
+<span class="nv">Application</span>.<span class="nv">StatusBar</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Looptest läuft...</span><span class="s2">&quot;</span>
+<span class="nv">DoEvents</span>
+<span class="nv">On</span> <span class="nv">Error</span> <span class="k">GoTo</span> <span class="nl">ErrHandler</span>
+
+<span class="nv">Dim</span> <span class="nv">x</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Dim</span> <span class="nv">y</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Dim</span> <span class="nv">lContinue</span> <span class="nv">As</span> <span class="nv">Long</span>
+
+<span class="nv">y</span> <span class="o">=</span> <span class="mi">1000000000</span>
+<span class="k">For</span> <span class="nv">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">y</span> <span class="nv">Step</span> <span class="mi">1</span>
+<span class="k">Next</span>
+
+<span class="nv">Application</span>.<span class="nv">EnableCancelKey</span> <span class="o">=</span> <span class="nv">xlInterrupt</span>
+<span class="k">Exit</span> <span class="nv">Sub</span>
+
+<span class="nv">ErrHandler</span>:
+<span class="k">If</span> <span class="nv">Err</span>.<span class="nv">Number</span> <span class="o">=</span> <span class="mi">18</span> <span class="k">Then</span>
+<span class="nv">Application</span>.<span class="nv">StatusBar</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">ESC...</span><span class="s2">&quot;</span>
+<span class="nv">DoEvents</span>
+<span class="nv">lContinue</span> <span class="o">=</span> <span class="nv">MsgBox</span><span class="ss">(</span><span class="nv">prompt</span>:<span class="o">=</span><span class="nv">Format</span><span class="ss">(</span><span class="nv">x</span> <span class="o">/</span> <span class="nv">y</span>, <span class="s2">&quot;</span><span class="s">0.0%</span><span class="s2">&quot;</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s"> complete</span><span class="s2">&quot;</span> <span class="o">&amp;</span> <span class="nv">vbCrLf</span> <span class="o">&amp;</span> <span class="nv">_</span>
+<span class="s2">&quot;</span><span class="s">Weiter?</span><span class="s2">&quot;</span>, <span class="nv">Buttons</span>:<span class="o">=</span><span class="nv">vbYesNo</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">lContinue</span> <span class="o">=</span> <span class="nv">vbYes</span> <span class="k">Then</span>
+<span class="nv">Resume</span>
+<span class="k">Else</span>
+<span class="nv">Application</span>.<span class="nv">EnableCancelKey</span> <span class="o">=</span> <span class="nv">xlInterrupt</span>
+<span class="nv">MsgBox</span> <span class="ss">(</span><span class="s2">&quot;</span><span class="s">Programm vorzeitig beendet</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="s1">&#39;</span><span class="s">Exit Sub</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="nv">Application</span>.<span class="nv">EnableCancelKey</span> <span class="o">=</span> <span class="nv">xlInterrupt</span>
+<span class="nv">Application</span>.<span class="nv">StatusBar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Public</span> <span class="nv">Function</span> <span class="nv">UmlauteKlein</span><span class="ss">(</span><span class="nv">Anything</span> <span class="nv">As</span> <span class="nv">Variant</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Variant</span>
+<span class="nv">Dim</span> <span class="nv">i</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Dim</span> <span class="nv">Ch</span> <span class="nv">As</span> <span class="nv">String</span> <span class="o">*</span> <span class="mi">1</span>
+<span class="nv">Dim</span> <span class="nv">Res</span> <span class="nv">As</span> <span class="nv">String</span>
+
+<span class="k">If</span> <span class="nv">IsNull</span><span class="ss">(</span><span class="nv">Anything</span><span class="ss">)</span> <span class="k">Then</span> <span class="nv">Umlaut</span> <span class="o">=</span> <span class="nv">Null</span>: <span class="k">Exit</span> <span class="nv">Function</span>
+<span class="nv">Anything</span> <span class="o">=</span> <span class="nv">LCase</span><span class="ss">(</span><span class="nv">Anything</span><span class="ss">)</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">Anything</span><span class="ss">)</span>
+<span class="nv">Ch</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">Anything</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="nv">Select</span> <span class="nv">Case</span> <span class="nv">Asc</span><span class="ss">(</span><span class="nv">Ch</span><span class="ss">)</span>
+<span class="nv">Case</span> <span class="nv">Asc</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ä</span><span class="s2">&quot;</span><span class="ss">)</span>: <span class="nv">Res</span> <span class="o">=</span> <span class="nv">Res</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s">ae</span><span class="s2">&quot;</span>
+<span class="nv">Case</span> <span class="nv">Asc</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ö</span><span class="s2">&quot;</span><span class="ss">)</span>: <span class="nv">Res</span> <span class="o">=</span> <span class="nv">Res</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s">oe</span><span class="s2">&quot;</span>
+<span class="nv">Case</span> <span class="nv">Asc</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ü</span><span class="s2">&quot;</span><span class="ss">)</span>: <span class="nv">Res</span> <span class="o">=</span> <span class="nv">Res</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s">ue</span><span class="s2">&quot;</span>
+<span class="nv">Case</span> <span class="nv">Asc</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">ß</span><span class="s2">&quot;</span><span class="ss">)</span>: <span class="nv">Res</span> <span class="o">=</span> <span class="nv">Res</span> <span class="o">&amp;</span> <span class="s2">&quot;</span><span class="s">ss</span><span class="s2">&quot;</span>
+<span class="nv">Case</span> <span class="k">Else</span>: <span class="nv">Res</span> <span class="o">=</span> <span class="nv">Res</span> <span class="o">&amp;</span> <span class="nv">Ch</span>
+<span class="k">End</span> <span class="nv">Select</span>
+<span class="k">Next</span>
+<span class="nv">UmlauteKlein</span> <span class="o">=</span> <span class="nv">Res</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+<span class="nv">Public</span> <span class="nv">Function</span> <span class="nv">conc</span><span class="ss">(</span><span class="nv">ByRef</span> <span class="nv">rng</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">Optional</span> <span class="nv">ByVal</span> <span class="nv">del</span> <span class="nv">As</span> <span class="nv">String</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s"> </span><span class="s2">&quot;</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">cell</span> <span class="nv">As</span> <span class="nv">Range</span>
+
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">cell</span> <span class="nv">In</span> <span class="nv">rng</span>
+<span class="k">If</span> <span class="nv">cell</span> <span class="o">&lt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="k">Then</span>
+<span class="nv">conc</span> <span class="o">=</span> <span class="nv">conc</span> <span class="o">&amp;</span> <span class="nv">cell</span> <span class="o">&amp;</span> <span class="nv">del</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="k">If</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">conc</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">Then</span> <span class="nv">_</span>
+<span class="nv">conc</span> <span class="o">=</span> <span class="nv">left</span><span class="ss">(</span><span class="nv">conc</span>, <span class="nv">Len</span><span class="ss">(</span><span class="nv">conc</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">del</span><span class="ss">))</span>
+
+<span class="k">End</span> <span class="nv">Function</span>
+
+<span class="s1">&#39;</span><span class="s">######################################################################</span><span class="s1">&#39;</span><span class="mi">2</span> <span class="nv">Spalten</span> <span class="nv">vergleichen</span>
+<span class="s1">&#39;</span><span class="s">######################################################################</span>
+
+<span class="nv">Public</span> <span class="nv">Sub</span> <span class="nv">StringsVergleich</span><span class="ss">()</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">InputRng1</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng2</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng3</span> <span class="nv">As</span> <span class="nv">Range</span>
+<span class="nv">Dim</span> <span class="nv">InputRng4</span> <span class="nv">As</span> <span class="nv">Range</span>
+
+<span class="nv">Set</span> <span class="nv">InputRng1</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng1</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 1:</span><span class="s2">&quot;</span>, <span class="nv">InputRng1</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">InputRng2</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng2</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 2:</span><span class="s2">&quot;</span>, <span class="nv">InputRng2</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">InputRng3</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng3</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 3:</span><span class="s2">&quot;</span>, <span class="nv">InputRng3</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">InputRng4</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">Selection</span>
+<span class="nv">Set</span> <span class="nv">InputRng4</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Range 4:</span><span class="s2">&quot;</span>, <span class="nv">InputRng4</span>.<span class="nv">Address</span>, <span class="nv">Type</span>:<span class="o">=</span><span class="mi">8</span><span class="ss">)</span>
+
+<span class="nv">rng1</span> <span class="o">=</span> <span class="nv">InputRng1</span>.<span class="nv">Column</span>
+<span class="nv">rng2</span> <span class="o">=</span> <span class="nv">InputRng2</span>.<span class="nv">Column</span>
+<span class="nv">rng3</span> <span class="o">=</span> <span class="nv">InputRng3</span>.<span class="nv">Column</span>
+<span class="nv">rng4</span> <span class="o">=</span> <span class="nv">InputRng4</span>.<span class="nv">Column</span>
+
+<span class="nv">letztezeile</span> <span class="o">=</span> <span class="nv">ActiveSheet</span>.<span class="nv">Cells</span><span class="ss">(</span><span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span>
+<span class="nv">Dim</span> <span class="nv">a</span><span class="ss">()</span> <span class="nv">As</span> <span class="nv">Byte</span>, <span class="nv">b</span><span class="ss">()</span> <span class="nv">As</span> <span class="nv">Byte</span>, <span class="nv">a_</span>$, <span class="nv">b_</span>$, <span class="nv">i</span><span class="o">&amp;</span>, <span class="nv">j</span><span class="o">&amp;</span>, <span class="nv">d</span><span class="o">&amp;</span>, <span class="nv">u</span><span class="o">&amp;</span>, <span class="nv">l</span><span class="o">&amp;</span>, <span class="nv">x</span><span class="o">&amp;</span>, <span class="nv">y</span><span class="o">&amp;</span>, <span class="nv">f</span><span class="o">&amp;</span><span class="ss">()</span>
+<span class="nv">Const</span> <span class="nv">GAP</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nv">Const</span> <span class="nv">PAD</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">_</span><span class="s2">&quot;</span>
+<span class="nv">Columns</span><span class="ss">(</span><span class="nv">rng3</span><span class="ss">)</span>.<span class="nv">Clear</span> <span class="s1">&#39;</span><span class="s">[3:4].Clear</span>
+<span class="nv">Columns</span><span class="ss">(</span><span class="nv">rng4</span><span class="ss">)</span>.<span class="nv">Clear</span>
+<span class="nv">Columns</span><span class="ss">(</span><span class="nv">rng3</span><span class="ss">)</span>.<span class="nv">Font</span>.<span class="nv">Name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Courier New</span><span class="s2">&quot;</span> <span class="s1">&#39;</span><span class="s">.[c:d].Font.Name = &quot;Courier New&quot;</span>
+<span class="nv">Columns</span><span class="ss">(</span><span class="nv">rng4</span><span class="ss">)</span>.<span class="nv">Font</span>.<span class="nv">Name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Courier New</span><span class="s2">&quot;</span>
+
+<span class="k">For</span> <span class="nv">zeile</span> <span class="o">=</span> <span class="mi">2</span> <span class="nv">To</span> <span class="nv">letztezeile</span>
+<span class="nv">a_</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nv">b_</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="nv">a</span> <span class="o">=</span> <span class="nv">Cells</span><span class="ss">(</span><span class="nv">zeile</span>, <span class="nv">rng1</span><span class="ss">)</span>.<span class="nv">Text</span> <span class="s1">&#39;</span><span class="s">[a + zeile].Text</span>
+<span class="nv">b</span> <span class="o">=</span> <span class="nv">Cells</span><span class="ss">(</span><span class="nv">zeile</span>, <span class="nv">rng2</span><span class="ss">)</span>.<span class="nv">Text</span> <span class="s1">&#39;</span><span class="s">[b + zeile].Text</span>
+
+<span class="nv">ReDim</span> <span class="nv">f</span><span class="ss">(</span><span class="mi">0</span> <span class="nv">To</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">b</span><span class="ss">)</span> \ <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>, <span class="mi">0</span> <span class="nv">To</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span> \ <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="ss">)</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">f</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="k">For</span> <span class="nv">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">f</span>, <span class="mi">2</span><span class="ss">)</span>
+<span class="nv">x</span> <span class="o">=</span> <span class="nv">j</span> <span class="o">-</span> <span class="mi">1</span>: <span class="nv">Debug</span>.<span class="nv">Print</span> <span class="nv">x</span>
+<span class="nv">y</span> <span class="o">=</span> <span class="nv">i</span> <span class="o">-</span> <span class="mi">1</span>: <span class="nv">Debug</span>.<span class="nv">Print</span> <span class="nv">y</span>
+<span class="k">If</span> <span class="nv">a</span><span class="ss">(</span><span class="nv">x</span> <span class="o">*</span> <span class="mi">2</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">b</span><span class="ss">(</span><span class="nv">y</span> <span class="o">*</span> <span class="mi">2</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="nv">d</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="nv">u</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">j</span><span class="ss">)</span>
+<span class="nv">l</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">i</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="k">Else</span>
+<span class="nv">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="nv">u</span> <span class="o">=</span> <span class="nv">GAP</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">j</span><span class="ss">)</span>
+<span class="nv">l</span> <span class="o">=</span> <span class="nv">GAP</span> <span class="o">+</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">i</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="nv">f</span><span class="ss">(</span><span class="nv">i</span>, <span class="nv">j</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">Max</span><span class="ss">(</span><span class="nv">d</span>, <span class="nv">u</span>, <span class="nv">l</span><span class="ss">)</span>
+<span class="k">Next</span>
+<span class="k">Next</span>
+
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">f</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="nv">j</span> <span class="o">=</span> <span class="nv">UBound</span><span class="ss">(</span><span class="nv">f</span>, <span class="mi">2</span><span class="ss">)</span>
+<span class="nv">On</span> <span class="nv">Error</span> <span class="nv">Resume</span> <span class="k">Next</span>
+<span class="k">Do</span>
+<span class="nv">x</span> <span class="o">=</span> <span class="nv">j</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nv">y</span> <span class="o">=</span> <span class="nv">i</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nv">d</span> <span class="o">=</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="nv">u</span> <span class="o">=</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">y</span>, <span class="nv">j</span><span class="ss">)</span>
+<span class="nv">l</span> <span class="o">=</span> <span class="nv">f</span><span class="ss">(</span><span class="nv">i</span>, <span class="nv">x</span><span class="ss">)</span>
+<span class="nv">Select</span> <span class="nv">Case</span> <span class="nv">True</span>
+<span class="nv">Case</span> <span class="nv">Err</span>
+<span class="k">If</span> <span class="nv">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">Then</span> <span class="k">GoTo</span> <span class="nl">left</span> <span class="k">Else</span> <span class="k">GoTo</span> <span class="nl">up</span>
+<span class="nv">Case</span> <span class="nv">d</span> <span class="o">&gt;=</span> <span class="nv">u</span> <span class="nv">And</span> <span class="nv">d</span> <span class="o">&gt;=</span> <span class="nv">l</span> <span class="nv">Or</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">j</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="nv">diag</span>:
+<span class="nv">a_</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">j</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">a_</span>
+<span class="nv">b_</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">b_</span>
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">i</span> <span class="o">-</span> <span class="mi">1</span>: <span class="nv">j</span> <span class="o">=</span> <span class="nv">j</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nv">Case</span> <span class="nv">u</span> <span class="o">&gt;</span> <span class="nv">l</span>
+<span class="nv">up</span>:
+<span class="nv">a_</span> <span class="o">=</span> <span class="nv">PAD</span> <span class="o">&amp;</span> <span class="nv">a_</span>
+<span class="nv">b_</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">b_</span>
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">i</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nv">Case</span> <span class="nv">l</span> <span class="o">&gt;</span> <span class="nv">u</span>
+<span class="nv">left</span>:
+<span class="nv">a_</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">j</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">a_</span>
+<span class="nv">b_</span> <span class="o">=</span> <span class="nv">PAD</span> <span class="o">&amp;</span> <span class="nv">b_</span>
+<span class="nv">j</span> <span class="o">=</span> <span class="nv">j</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">End</span> <span class="nv">Select</span>
+<span class="k">Loop</span> <span class="k">Until</span> <span class="nv">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="nv">And</span> <span class="nv">j</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="nv">DecorateStrings</span> <span class="nv">a_</span>, <span class="nv">b_</span>, <span class="nv">Cells</span><span class="ss">(</span><span class="nv">zeile</span>, <span class="nv">rng3</span><span class="ss">)</span>, <span class="nv">Cells</span><span class="ss">(</span><span class="nv">zeile</span>, <span class="nv">rng4</span><span class="ss">)</span>, <span class="nv">PAD</span> <span class="s1">&#39;</span><span class="s">Range(&quot;C&quot; &amp; zeile), Range(&quot;D&quot; &amp; zeile), PAD </span><span class="s1">&#39;</span> <span class="s1">&#39;</span><span class="s">[c2], [d2], PAD</span>
+<span class="k">Next</span> <span class="nv">zeile</span>
+
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Private</span> <span class="nv">Function</span> <span class="nv">Max</span><span class="ss">(</span><span class="nv">a</span><span class="o">&amp;</span>, <span class="nv">b</span><span class="o">&amp;</span>, <span class="nv">c</span><span class="o">&amp;</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">Long</span>
+<span class="nv">Max</span> <span class="o">=</span> <span class="nv">a</span>
+<span class="k">If</span> <span class="nv">b</span> <span class="o">&gt;</span> <span class="nv">a</span> <span class="k">Then</span> <span class="nv">Max</span> <span class="o">=</span> <span class="nv">b</span>
+<span class="k">If</span> <span class="nv">c</span> <span class="o">&gt;</span> <span class="nv">b</span> <span class="k">Then</span> <span class="nv">Max</span> <span class="o">=</span> <span class="nv">c</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">DecorateStrings</span><span class="ss">(</span><span class="nv">a</span>$, <span class="nv">b</span>$, <span class="nv">rOutA</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">rOutB</span> <span class="nv">As</span> <span class="nv">Range</span>, <span class="nv">PAD</span>$<span class="ss">)</span>
+<span class="nv">Dim</span> <span class="nv">i</span><span class="o">&amp;</span>, <span class="nv">j</span><span class="o">&amp;</span>
+
+<span class="nv">FloatArtifacts</span> <span class="nv">a</span>, <span class="nv">b</span>, <span class="nv">PAD</span>
+<span class="nv">FloatArtifacts</span> <span class="nv">b</span>, <span class="nv">a</span>, <span class="nv">PAD</span>
+
+<span class="nv">rOutA</span> <span class="o">=</span> <span class="nv">a</span>
+<span class="nv">rOutB</span> <span class="o">=</span> <span class="nv">b</span>
+
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&lt;&gt;</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&lt;&gt;</span> <span class="nv">PAD</span> <span class="k">Then</span>
+<span class="nv">rOutA</span>.<span class="nv">Characters</span><span class="ss">(</span><span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="nv">Font</span>.<span class="nv">Color</span> <span class="o">=</span> <span class="nv">vbRed</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">b</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">a</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&lt;&gt;</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">b</span>, <span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&lt;&gt;</span> <span class="nv">PAD</span> <span class="k">Then</span>
+<span class="nv">rOutB</span>.<span class="nv">Characters</span><span class="ss">(</span><span class="nv">i</span>, <span class="mi">1</span><span class="ss">)</span>.<span class="nv">Font</span>.<span class="nv">Color</span> <span class="o">=</span> <span class="nv">vbRed</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Private</span> <span class="nv">Sub</span> <span class="nv">FloatArtifacts</span><span class="ss">(</span><span class="nv">s1</span>$, <span class="nv">s2</span>$, <span class="nv">PAD</span>$<span class="ss">)</span>
+<span class="nv">Dim</span> <span class="nv">c</span><span class="o">&amp;</span>, <span class="nv">k</span><span class="o">&amp;</span>, <span class="nv">i</span><span class="o">&amp;</span>, <span class="nv">p</span><span class="o">&amp;</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="nv">To</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">s1</span><span class="ss">)</span>
+<span class="nv">c</span> <span class="o">=</span> <span class="nv">InStr</span><span class="ss">(</span><span class="nv">i</span>, <span class="nv">s1</span>, <span class="nv">PAD</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">c</span> <span class="k">Then</span>
+<span class="nv">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">Do</span>
+<span class="nv">k</span> <span class="o">=</span> <span class="nv">k</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s1</span>, <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">&lt;&gt;</span> <span class="nv">PAD</span> <span class="k">Then</span>
+<span class="k">If</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s2</span>, <span class="nv">c</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s1</span>, <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>, <span class="mi">1</span><span class="ss">)</span> <span class="k">Then</span>
+<span class="nv">p</span> <span class="o">=</span> <span class="nv">InStr</span><span class="ss">(</span><span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>, <span class="nv">s1</span>, <span class="nv">PAD</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">p</span> <span class="o">&lt;</span> <span class="ss">(</span><span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span> <span class="o">+</span> <span class="mi">6</span><span class="ss">)</span> <span class="nv">And</span> <span class="nv">p</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+<span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s1</span>, <span class="nv">c</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s1</span>, <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>, <span class="mi">1</span><span class="ss">)</span>
+<span class="nv">Mid</span>$<span class="ss">(</span><span class="nv">s1</span>, <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>, <span class="mi">1</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">PAD</span>
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">c</span>
+<span class="k">Exit</span> <span class="k">Do</span>
+<span class="k">Else</span>
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>
+<span class="k">Exit</span> <span class="k">Do</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Else</span>
+<span class="nv">i</span> <span class="o">=</span> <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span>
+<span class="k">Exit</span> <span class="k">Do</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">If</span> <span class="nv">c</span> <span class="o">+</span> <span class="nv">k</span> <span class="o">&gt;</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">s1</span><span class="ss">)</span> <span class="k">Then</span> <span class="k">Exit</span> <span class="k">Do</span>
+<span class="k">Loop</span>
+<span class="k">Else</span>
+<span class="k">Exit</span> <span class="k">For</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+<span class="s1">&#39;</span><span class="s">######################################################################</span><span class="s1">&#39;</span><span class="mi">2</span> <span class="nv">Spalten</span> <span class="nv">vergleichen</span>
+<span class="s1">&#39;</span><span class="s">######################################################################</span>
+
+<span class="s1">&#39;</span><span class="s">######################################################################</span><span class="s1">&#39;</span><span class="nv">Dateien_auflisten</span>
+<span class="s1">&#39;</span><span class="s">######################################################################</span>
+
+<span class="s1">&#39;</span><span class="s">Option Explicit</span>
+<span class="nv">Public</span> <span class="nv">Ordner</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Public</span> <span class="nv">erweiterung</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Public</span> <span class="nv">NextRow</span> <span class="nv">As</span> <span class="nv">Long</span>
+
+<span class="nv">Sub</span> <span class="nv">Dateien_auflisten</span><span class="ss">()</span>
+
+<span class="nv">Ordner</span> <span class="o">=</span> <span class="nv">GetFolder</span><span class="ss">(</span><span class="nv">Ordner</span><span class="ss">)</span>
+
+<span class="k">If</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">Ordner</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+<span class="nv">erweiterung</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="k">InputBox</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Dateien mit welcher Erweiterung?</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">ListFiles</span> <span class="ss">(</span><span class="nv">Ordner</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">ListFiles</span><span class="ss">(</span><span class="nv">Ordner</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Dim</span> <span class="nv">objFSO</span> <span class="nv">As</span> <span class="nv">Scripting</span>.<span class="nv">FileSystemObject</span>
+<span class="nv">Dim</span> <span class="nv">objTopFolder</span> <span class="nv">As</span> <span class="nv">Scripting</span>.<span class="nv">Folder</span>
+<span class="nv">Dim</span> <span class="nv">strTopFolderName</span> <span class="nv">As</span> <span class="nv">String</span>
+
+<span class="nv">Columns</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A:E</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">ClearContents</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">False</span>
+
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Dateiname</span><span class="s2">&quot;</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">B1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Größe [kb]</span><span class="s2">&quot;</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">C1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Dateityp</span><span class="s2">&quot;</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">D1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Erstelldatum</span><span class="s2">&quot;</span>
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">E1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">ShortPath</span><span class="s2">&quot;</span>
+
+<span class="nv">strTopFolderName</span> <span class="o">=</span> <span class="nv">Ordner</span>
+
+<span class="k">If</span> <span class="nv">Len</span><span class="ss">(</span><span class="nv">strTopFolderName</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+<span class="nv">Set</span> <span class="nv">objFSO</span> <span class="o">=</span> <span class="nv">CreateObject</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Scripting.FileSystemObject</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">Set</span> <span class="nv">objTopFolder</span> <span class="o">=</span> <span class="nv">objFSO</span>.<span class="nv">GetFolder</span><span class="ss">(</span><span class="nv">strTopFolderName</span><span class="ss">)</span>
+<span class="k">Call</span> <span class="nl">RecursiveFolder</span><span class="ss">(</span><span class="nv">objTopFolder</span>, <span class="nv">True</span><span class="ss">)</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="nv">Range</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">A1</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Select</span>
+<span class="s1">&#39;</span><span class="s">Unload UserForm2</span>
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">Count: </span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nv">CStr</span><span class="ss">(</span><span class="nv">NextRow</span> <span class="o">-</span> <span class="mi">2</span><span class="ss">)</span>
+<span class="nv">Application</span>.<span class="nv">ScreenUpdating</span> <span class="o">=</span> <span class="nv">True</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Sub</span> <span class="nv">RecursiveFolder</span><span class="ss">(</span><span class="nv">objFolder</span> <span class="nv">As</span> <span class="nv">Scripting</span>.<span class="nv">Folder</span>, <span class="nv">IncludeSubFolders</span> <span class="nv">As</span> <span class="nv">Boolean</span><span class="ss">)</span>
+<span class="nv">Dim</span> <span class="nv">objFile</span> <span class="nv">As</span> <span class="nv">Scripting</span>.<span class="nv">File</span>
+<span class="nv">Dim</span> <span class="nv">objSubFolder</span> <span class="nv">As</span> <span class="nv">Scripting</span>.<span class="nv">Folder</span>
+<span class="s1">&#39;</span><span class="s">Dim NextRow As Long</span>
+
+<span class="nv">NextRow</span> <span class="o">=</span> <span class="nv">Cells</span><span class="ss">(</span><span class="nv">Rows</span>.<span class="nv">Count</span>, <span class="s2">&quot;</span><span class="s">A</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="k">End</span><span class="ss">(</span><span class="nv">xlUp</span><span class="ss">)</span>.<span class="nv">Row</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="s1">&#39;</span><span class="s">Loop through each file in the folder</span>
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">objFile</span> <span class="nv">In</span> <span class="nv">objFolder</span>.<span class="nv">Files</span>
+
+<span class="k">If</span> <span class="nv">Right</span><span class="ss">(</span><span class="nv">objFile</span>, <span class="nv">Len</span><span class="ss">(</span><span class="nv">erweiterung</span><span class="ss">))</span> <span class="o">=</span> <span class="nv">erweiterung</span> <span class="k">Then</span> <span class="s1">&#39;</span><span class="s"> Or Right(objFile, 3) = &quot;odx&quot; Then</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Hyperlinks</span>.<span class="nv">Add</span> <span class="nv">Anchor</span>:<span class="o">=</span><span class="nv">Cells</span><span class="ss">(</span><span class="nv">NextRow</span>, <span class="s2">&quot;</span><span class="s">A</span><span class="s2">&quot;</span><span class="ss">)</span>, <span class="nv">Address</span>:<span class="o">=</span><span class="nv">objFile</span>.<span class="nv">ParentFolder</span>, <span class="nv">TextToDisplay</span>:<span class="o">=</span><span class="nv">objFile</span>.<span class="nv">Name</span>
+<span class="nv">Cells</span><span class="ss">(</span><span class="nv">NextRow</span>, <span class="s2">&quot;</span><span class="s">B</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">objFile</span>.<span class="nv">Size</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="nv">Cells</span><span class="ss">(</span><span class="nv">NextRow</span>, <span class="s2">&quot;</span><span class="s">C</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">objFile</span>.<span class="nv">Type</span>
+<span class="nv">Cells</span><span class="ss">(</span><span class="nv">NextRow</span>, <span class="s2">&quot;</span><span class="s">D</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">objFile</span>.<span class="nv">DateCreated</span>
+<span class="nv">Cells</span><span class="ss">(</span><span class="nv">NextRow</span>, <span class="s2">&quot;</span><span class="s">E</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">Value</span> <span class="o">=</span> <span class="nv">objFile</span>.<span class="nv">ShortPath</span>
+<span class="nv">NextRow</span> <span class="o">=</span> <span class="nv">NextRow</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="nv">objFile</span>
+
+<span class="s1">&#39;</span><span class="s">Loop through files in the subfolders</span>
+<span class="k">If</span> <span class="nv">IncludeSubFolders</span> <span class="k">Then</span>
+<span class="k">For</span> <span class="nv">Each</span> <span class="nv">objSubFolder</span> <span class="nv">In</span> <span class="nv">objFolder</span>.<span class="nv">SubFolders</span>
+<span class="k">Call</span> <span class="nl">RecursiveFolder</span><span class="ss">(</span><span class="nv">objSubFolder</span>, <span class="nv">True</span><span class="ss">)</span>
+<span class="k">Next</span> <span class="nv">objSubFolder</span>
+<span class="k">End</span> <span class="k">If</span>
+
+<span class="k">End</span> <span class="nv">Sub</span>
+
+<span class="nv">Function</span> <span class="nv">GetFolder</span><span class="ss">(</span><span class="nv">strPath</span> <span class="nv">As</span> <span class="nv">String</span><span class="ss">)</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Dim</span> <span class="nv">fldr</span> <span class="nv">As</span> <span class="nv">FileDialog</span>
+<span class="nv">Dim</span> <span class="nv">sItem</span> <span class="nv">As</span> <span class="nv">String</span>
+<span class="nv">Set</span> <span class="nv">fldr</span> <span class="o">=</span> <span class="nv">Application</span>.<span class="nv">FileDialog</span><span class="ss">(</span><span class="nv">msoFileDialogFolderPicker</span><span class="ss">)</span>
+<span class="nv">With</span> <span class="nv">fldr</span>
+.<span class="nv">Title</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Ordner auswählen</span><span class="s2">&quot;</span>
+.<span class="nv">AllowMultiSelect</span> <span class="o">=</span> <span class="nv">False</span>
+<span class="s1">&#39;</span><span class="s"> .InitialFileName = &quot;</span><span class="se">\\</span><span class="s">cp091227\IBT\EE_Datenmanagement\EE-Daten\Flashfiles\&quot;</span>
+<span class="k">If</span> .<span class="k">Show</span> <span class="o">&lt;&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="k">Then</span> <span class="k">GoTo</span> <span class="nl">NextCode</span>
+<span class="nv">sItem</span> <span class="o">=</span> .<span class="nv">SelectedItems</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>
+<span class="k">End</span> <span class="nv">With</span>
+<span class="nv">NextCode</span>:
+<span class="nv">GetFolder</span> <span class="o">=</span> <span class="nv">sItem</span>
+<span class="nv">Set</span> <span class="nv">fldr</span> <span class="o">=</span> <span class="nv">Nothing</span>
+<span class="k">End</span> <span class="nv">Function</span>
+
+<span class="s1">&#39;</span><span class="s">######################################################################</span>
+<span class="s1">&#39;</span><span class="s">Dateien_auflisten</span>
+<span class="s1">&#39;</span><span class="s">######################################################################</span>
+
+
+<span class="nv">VBA</span> <span class="nv">Code</span> <span class="nv">to</span> <span class="nv">Unlock</span> <span class="nv">a</span> <span class="nv">Locked</span> <span class="nv">Excel</span> <span class="nv">Sheet</span>
+
+<span class="nv">Sub</span> <span class="nv">PasswordBreaker</span><span class="ss">()</span>
+
+<span class="s1">&#39;</span><span class="s">Breaks worksheet password protection.</span>
+
+<span class="nv">Dim</span> <span class="nv">i</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">j</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">k</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">l</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">m</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">n</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">i1</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">i2</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">i3</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">Dim</span> <span class="nv">i4</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">i5</span> <span class="nv">As</span> <span class="nv">Integer</span>, <span class="nv">i6</span> <span class="nv">As</span> <span class="nv">Integer</span>
+<span class="nv">On</span> <span class="nv">Error</span> <span class="nv">Resume</span> <span class="k">Next</span>
+<span class="k">For</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">j</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">k</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>
+<span class="k">For</span> <span class="nv">l</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">m</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">i1</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>
+<span class="k">For</span> <span class="nv">i2</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">i3</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">i4</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>
+<span class="k">For</span> <span class="nv">i5</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">i6</span> <span class="o">=</span> <span class="mi">65</span> <span class="nv">To</span> <span class="mi">66</span>: <span class="k">For</span> <span class="nv">n</span> <span class="o">=</span> <span class="mi">32</span> <span class="nv">To</span> <span class="mi">126</span>
+<span class="nv">ActiveSheet</span>.<span class="nv">Unprotect</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">k</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">_</span>
+<span class="nv">Chr</span><span class="ss">(</span><span class="nv">l</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">m</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i2</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i3</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">_</span>
+<span class="nv">Chr</span><span class="ss">(</span><span class="nv">i4</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i5</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i6</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>
+<span class="k">If</span> <span class="nv">ActiveSheet</span>.<span class="nv">ProtectContents</span> <span class="o">=</span> <span class="nv">False</span> <span class="k">Then</span>
+<span class="nv">MsgBox</span> <span class="s2">&quot;</span><span class="s">One usable password is </span><span class="s2">&quot;</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">_</span>
+<span class="nv">Chr</span><span class="ss">(</span><span class="nv">k</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">l</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">m</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i1</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i2</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">_</span>
+<span class="nv">Chr</span><span class="ss">(</span><span class="nv">i3</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i4</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i5</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">i6</span><span class="ss">)</span> <span class="o">&amp;</span> <span class="nv">Chr</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>
+<span class="k">Exit</span> <span class="nv">Sub</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>
+<span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>: <span class="k">Next</span>
+<span class="k">End</span> <span class="nv">Sub</span>
+</pre></div>
+  </div><!-- /.entry-content -->
+  <!-- Pagination -->
+            <div class="pagination">
+            </div>
+ 
+</div>
+</div>
+<!-- /#contentinfo -->
+</body>
+</html>

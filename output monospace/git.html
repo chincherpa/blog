@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>lulef.online Blog : git</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="theme/css/main.css" type="text/css" />
+</head>
+
+<body>
+	<div id="wrap" style="width:850px">
+	    <div id="container" style="width:560px">
+            <div class="entry">
+        
+<header>
+<h1><a href="" id="site-title">  </a>         <a href="git.html" id="page-title">git</a></h1>
+<time datetime="2019-01-02T00:22:00+01:00">Mi 02 Januar 2019</time></header>
+<article>
+    <!-- wp:preformatted -->
+
+<div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">init</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@git</span><span class="p">.</span><span class="n">sr</span><span class="p">.</span><span class="nl">ht</span><span class="p">:</span><span class="o">~</span><span class="n">chincherpa</span><span class="o">/</span><span class="n">ascii_print</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@git</span><span class="p">.</span><span class="n">sr</span><span class="p">.</span><span class="nl">ht</span><span class="p">:</span><span class="o">~</span><span class="n">chincherpa</span><span class="o">/</span><span class="n">my_scripts</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="ss">&quot;initial commit&quot;</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">master</span><span class="w"></span>
+</pre></div>
+
+
+<!-- /wp:preformatted -->
+
+<!-- wp:heading {"level":4} -->
+
+<h4>Datei löschen</h4>
+<!-- /wp:heading -->
+
+<!-- wp:preformatted -->
+
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;remove file1.txt&quot;</span> 
+</pre></div>
+
+
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+
+<p>But if you want to remove the file only from the Git repository and not remove it from the filesystem, use:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="c1">--cached file1.txt</span>
+<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;remove file1.txt&quot;</span>
+</pre></div>
+
+
+<!-- /wp:preformatted -->
+
+<!-- wp:paragraph -->
+
+<p>And to push changes to remote repo</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:preformatted -->
+
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">branch_name</span>
+</pre></div>
+
+
+<!-- /wp:preformatted -->
+</article>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <h1><a href=" " title="title">lulef.online Blog</a></h1>
+            <span class="description"> </span>
+            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
+        </div>
+
+        <div id="footer">
+            <div id="credits">
+                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

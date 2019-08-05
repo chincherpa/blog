@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>lulef.online Blog : [Google Drive] Rename files</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="theme/css/main.css" type="text/css" />
+</head>
+
+<body>
+	<div id="wrap" style="width:850px">
+	    <div id="container" style="width:560px">
+            <div class="entry">
+        
+<header>
+<h1><a href="" id="site-title">  </a>         <a href="google-drive-rename-files.html" id="page-title">[Google Drive] Rename files</a></h1>
+<time datetime="2018-11-22T20:10:00+01:00">Do 22 November 2018</time></header>
+<article>
+    <h2>Google Apps Script</h2>
+<p>function rename() {\
+var fldr=DriveApp.getFolderById("1i7Q-8OtwYPe8xjrGMBtHjau7_vrryg");\
+var d=fldr.getFiles();\
+var f,n;\
+while (d.hasNext()) {\
+f=d.next();\
+n=f.getName();\
+start=n.slice(0,4).toLowerCase()\
+if (start.match("img_|img-|vid_|pano")) {\
+ext=n.slice(-3).toLowerCase();</p>
+<p>myYear=n.slice(4,8);\
+myMonth=n.slice(8,10);\
+myDay=n.slice(10,12);\
+myHour=n.slice(13,15);\
+myMinute=n.slice(15,17);\
+mySecond=n.slice(17,19);</p>
+<p>f.setName(myYear+'-'+myMonth+'-'+myDay+' '+myHour+'-'+myMinute+'-'+mySecond+'.'+ext);\
+}\
+}\
+}</p>
+</article>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <h1><a href=" " title="title">lulef.online Blog</a></h1>
+            <span class="description"> </span>
+            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
+        </div>
+
+        <div id="footer">
+            <div id="credits">
+                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>lulef.online Blog : json</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="theme/css/main.css" type="text/css" />
+</head>
+
+<body>
+	<div id="wrap" style="width:850px">
+	    <div id="container" style="width:560px">
+            <div class="entry">
+        
+<header>
+<h1><a href="" id="site-title">  </a>         <a href="json.html" id="page-title">json</a></h1>
+<time datetime="2019-03-11T21:46:00+01:00">Mo 11 März 2019</time></header>
+<article>
+    <!-- wp:code -->
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">conf</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;jsonfile.json&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">conf</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;use_dropbox&#39;</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;jep -&gt;&#39;</span><span class="p">,</span> <span class="n">conf</span><span class="p">[</span><span class="s1">&#39;use_dropbox&#39;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;NOPE&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">conf</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre></div>
+
+
+<!-- /wp:code -->
+</article>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <h1><a href=" " title="title">lulef.online Blog</a></h1>
+            <span class="description"> </span>
+            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
+        </div>
+
+        <div id="footer">
+            <div id="credits">
+                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

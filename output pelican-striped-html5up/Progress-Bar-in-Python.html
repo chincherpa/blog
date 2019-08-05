@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+          <title>lulef.online Blog</title>
+        <meta charset="utf-8" />
+
+
+
+        <link rel="stylesheet" href="theme/css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="theme/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+        <header id="banner" class="body">
+                <h1><a href="">lulef.online Blog <strong></strong></a></h1>
+        </header><!-- /#banner -->
+<!-- Sidebar -->
+            <div id="sidebar">
+
+                <!-- Logo -->
+                    <h1 id="logo"><a href="">lulef.online Blog</a></h1>
+                    <!-- Text -->
+                    <section class="box text-style1">
+                        <div class="inner">
+                            <p>
+                                <strong>Ut scelerisque nec sapien ut sollicitudin:</strong><br />
+                            </p>
+                        </div>
+                    </section>
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            
+                            <li><a href="#">Nam euismod dui</a></li>
+                            <li><a href="#">Integer eget eros</a></li>
+                            <li><a href="#">Proin vehicula tortor</a></li>
+                            <li><a href="#">Vestibulum consectetur tellus</a></li>
+                        </ul>
+                    </nav>
+
+                <!-- Search -->
+                    <!-- <section class="box search">
+                        <form method="post" action="#">
+                            <input type="text" class="text" name="search" placeholder="Search" />
+                        </form>
+                    </section> -->
+
+                
+
+                <!-- Recent Posts -->
+                    <section class="box recent-posts">
+                        <header>
+                            <h2>Contact Me</h2>
+                        </header>
+                        <ul>
+                            <li><a class="icon fa-envelope" href="#"> eMail</a></li>
+                            <li><a class="icon fa-twitter" href="#"> Twitter</a></li>
+                            <li><a class="icon fa-facebook" href="#"> Facebook</a></li>
+                            <li><a class="icon fa-github" href="#"> Github</a></li>
+                            
+                        </ul>
+                    </section>
+
+
+
+                <!-- Copyright -->
+                    <ul id="copyright">
+                        <li>Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        <li>Modified under a <a href="https://creativecommons.org/licenses/by/3.0/">CC:BY</a> license.</li>
+                    </ul>
+
+            </div><!-- /#menu -->
+<div id="content">
+<div class="inner">
+        <article class="box post post-excerpt">
+                <header> 
+                <h2><a href="Progress-Bar-in-Python.html" rel="bookmark" title="Permalink to Progress Bar in Python">Progress Bar in Python</a></h2> 
+                <p></p>
+                </header>
+                <div class="info">
+                    <span class="date" datetime="2019-06-26T12:21:00+02:00"><span class="month">Jun</span> <span class="day">26</span> <span class="month"> 2019</span></span>
+                    <ul class="stats">
+                                    <li><a href="mailto:?Subject=Progress Bar in Python&Body=I%20saw%20this%20and%20thought%20of%20you!%20 /Progress-Bar-in-Python.html" class="icon fa-envelope">&nbsp;</a></li>
+                                    <li><a href="http://reddit.com/submit?url=/Progress-Bar-in-Python.html&title=#Progress Bar in Python"" class="icon fa-reddit">&nbsp;</a></li>
+                                    <li><a href="https://twitter.com/share?url=/Progress-Bar-in-Python.html&text=&hashtags=GnotC" class="icon fa-twitter">&nbsp;</a></li>
+                                    <li><a href="https://www.facebook.com/sharer.php?u=/Progress-Bar-in-Python.html" class="icon fa-facebook">&nbsp;</a></li>
+                                </ul>
+                </div><!-- /.post-info -->
+                <div class="entry-content"> &nbsp; </div><!-- /.entry-content -->
+        </article>
+    <!-- wp:paragraph -->
+
+<p><a href="https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/">https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/</a></p>
+<!-- /wp:paragraph -->
+
+<p>
+
+<!-- wp:html -->\
+
+</p>
+
+<header>
+
+How to Easily Use a Progress Bar in Python 
+===========================================
+
+</header>
+
+<div>
+
+![](https://codingdose.info/assets/images/progressbars/carbon.png)
+
+We’ve all been there, your code is performing a job and it’s going to take a while. I’m an impatient guy, so it would be nice to have an ETA or a progress bar to show us. Fortunately, there are libraries out there than can help us to achieve this!
+
+There’s two ways in which we can integrate a progress bar into our loops, via a [*Context Manager*](https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/) or just wrapping up an iterable object into a method.
+
+We’re going to be testing Progress, ProgressBar2, TQDM, Click and Clint, so make sure to create your testing environment with [Pipenv](https://codingdose.info/2018/02/20/pipenv-development-workflow/):
+
+<figure class="highlight bash">
+
++----------------------------------------------------+
+|     $ mkdir progressbar-testing                    |
+|     $ cd progressbar-testing                       |
+|     $ pipenv install tqdm progressbar2 click clint |
++----------------------------------------------------+
+
+</figure>
+
+[](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Progress "Progress"){.headerlink}[Progress](https://github.com/verigak/progress/) {#Progress}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+While I was testing each library, this is one I really liked, and this is because it has a lot of progress bar styles that you can play with. We’re not going to look at *all* of them, but you can take a look at the source code and documentation if you have further questions.
+
+### [](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Progress-BAR "Progress - BAR"){.headerlink}Progress - BAR {#Progress-BAR}
+
+This is the most basic one, is basically a progress bar that is being filled by a hash. It works pretty easily with a context manager, you can use this snippet as an example:
+
+<figure class="highlight python">
+
++---------------------------------------+
+|     from time import sleep            |
+|     from progress.bar import Bar      |
+|                                       |
+|     with Bar('Processing...') as bar: |
+|         for i in range(100):          |
+|             sleep(0.02)               |
+|             bar.next()                |
++---------------------------------------+
+
+</figure>
+
+As you can see, in this case we only import the `Bar` class and we add a *label* to our progress bar and it automatically handles our loop. At the end of each iteration, we have to append the `.next()` method to our `bar` object so we can update the progress bar.
+
+<video src="https://codingdose.info/assets/images/progressbars/progress-bar.webm" preload autoplay loop controls></video>
+
+### [](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Progress-PixelBar "Progress - PixelBar"){.headerlink}Progress - PixelBar {#Progress-PixelBar}
+
+We can achieve the same with other progress bar styles, let’s try the Pixel Bar:
+
+<figure class="highlight python">
+
++--------------------------------------------+
+|     from time import sleep                 |
+|     from progress.bar import PixelBar      |
+|                                            |
+|     with PixelBar('Processing...') as bar: |
+|         for i in range(100):               |
+|             sleep(0.02)                    |
+|             bar.next()                     |
++--------------------------------------------+
+
+</figure>
+
+<video src="https://codingdose.info/assets/images/progressbars/progress-pixelbar.webm" preload autoplay loop controls></video>
+
+### [](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Progress-PixelSpinner "Progress - PixelSpinner"){.headerlink}Progress - PixelSpinner {#Progress-PixelSpinner}
+
+Sometimes you don’t know how long it might take to perform an operation. If this is the case, then you can use the Pixel Spinner to display a pixel spinner (duh!) without an actual *progress bar*.
+
+<figure class="highlight python">
+
++------------------------------------------------+
+|     from time import sleep                     |
+|     from progress.spinner import PixelSpinner  |
+|                                                |
+|     with PixelSpinner('Processing...') as bar: |
+|         for i in range(100):                   |
+|             sleep(0.06)                        |
+|             bar.next()                         |
++------------------------------------------------+
+
+</figure>
+
+<video src="https://codingdose.info/assets/images/progressbars/progress-pixelspinner.webm" preload autoplay loop controls></video>
+
+Pretty neat right? You can read more about Progress here:
+
+-   [Source Code](https://github.com/verigak/progress/)
+
+------------------------------------------------------------------------
+
+[](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#TQDM "TQDM"){.headerlink}[TQDM](https://github.com/tqdm/tqdm) {#TQDM}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+[TQDM](https://github.com/tqdm/tqdm), a short for *taqadum* which means *progress* in Arabic, is a very popular choice, even more for data scientist or analysts, as it provides a really fast framework with a lot of customizations and information for you to work with.
+
+It’s also smart enough to use it with barely two lines of code. Just provide an iterable to the function `tqdm()` and your good to go.
+
+<figure class="highlight python">
+
++--------------------------------+
+|     from tqdm import tqdm      |
+|     from time import sleep     |
+|                                |
+|     for i in tqdm(range(100)): |
+|         sleep(0.02)            |
++--------------------------------+
+
+</figure>
+
+And there you go! You have a lot of information on your progress bar such as a percentage, the length of your iterable, an ETA and even *iterables per seconds*!
+
+<video src="https://codingdose.info/assets/images/progressbars/tqdm.webm" preload autoplay loop controls></video>
+
+You can also add a label to your progress bar, displaying each object along the way:
+
+<figure class="highlight python">
+
++-----------------------------------------------------------------+
+|     import string                                               |
+|     from tqdm import tqdm                                       |
+|     from time import sleep                                      |
+|                                                                 |
+|     # A list from A to Z wrapped around TQDM function           |
+|     progress_bar = tqdm(list(string.ascii_lowercase))           |
+|     for letter in progress_bar:                                 |
+|         progress_bar.set_description(f'Processing {letter}...') |
+|         sleep(0.09)                                             |
++-----------------------------------------------------------------+
+
+</figure>
+
+<video src="https://codingdose.info/assets/images/progressbars/tqdm-label.webm" preload autoplay loop controls></video>
+
+TQDM, from my perspective, is a really important project if you’re into Data Science or need a incredibly fast way to show progress to your operations, you can read more about it here:
+
+-   [Source Code & Documentation](https://github.com/tqdm/tqdm)
+-   [Wiki](https://github.com/tqdm/tqdm/wiki)
+
+------------------------------------------------------------------------
+
+[](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Click "Click"){.headerlink}[Click](https://click.palletsprojects.com/) {#Click}
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Click is one of the best libraries out there to create a [Command Line Interface](https://en.wikipedia.org/wiki/Command-line_interface) to your apps or libraries. I cannot recommend it enough!
+
+It also includes a very simple progress bar as an utility, you can use it inside a context manager, just like this:
+
+<figure class="highlight python">
+
++-----------------------------------------------------------------------------------------+
+|     import click                                                                        |
+|     from time import sleep                                                              |
+|                                                                                         |
+|     # Fill character is # by default, you can change it                                 |
+|     # for any other char you want, or even change the color.                            |
+|     fill_char = click.style('=', fg='yellow')                                           |
+|     with click.progressbar(range(100), label='Loading...', fill_char=fill_char) as bar: |
+|         for i in bar:                                                                   |
+|             sleep(0.02)                                                                 |
++-----------------------------------------------------------------------------------------+
+
+</figure>
+
+You can also see that we can change the color of the progress bar meter, and we also have an ETA.
+
+<video src="https://codingdose.info/assets/images/progressbars/click.webm" preload autoplay loop controls></video>
+
+If you want to know more about the progress bar utility in Click, you can check it out here:
+
+-   [Click - Showing Progress Bars](https://click.palletsprojects.com/en/7.x/utils/#showing-progress-bars)
+
+------------------------------------------------------------------------
+
+[](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#ProgressBar2 "ProgressBar2"){.headerlink}[ProgressBar2](https://github.com/WoLpH/python-progressbar) {#ProgressBar2}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This is also a very popular choice and one that is easy to use. It also work with widgets to calculate the current progress, such as AbsoluteETA, AdaptiveETA, AdaptiveTransferSpeed and others which are very interesting.
+
+It’s implementation is also very simple. As with TQDM, only need 2 lines of code are enough to get us started:
+
+<figure class="highlight python">
+
++-----------------------------------------+
+|     from time import sleep              |
+|     from progressbar import progressbar |
+|                                         |
+|     for i in progressbar(range(100)):   |
+|         sleep(0.02)                     |
++-----------------------------------------+
+
+</figure>
+
+And yes, although you install it as *progressbar2* make sure you import it as *progressbar*. Here’s how it displays the progress bar by default.
+
+<video src="https://codingdose.info/assets/images/progressbars/progressbar2.webm" preload autoplay loop controls></video>
+
+You can checkout the ProgressBar2 documentation and homepage here:
+
+-   [Homepage](https://github.com/WoLpH/python-progressbar)
+-   [Documentation](https://progressbar-2.readthedocs.io/en/latest/index.html)
+-   [Widgets](https://progressbar-2.readthedocs.io/en/latest/_modules/progressbar/widgets.html)
+
+------------------------------------------------------------------------
+
+[](https://codingdose.info/2019/06/15/how-to-use-a-progress-bar-in-python/#Clint "Clint"){.headerlink}[Clint](https://github.com/kennethreitz/clint) {#Clint}
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+And lastly we have Clint, which stands for ***C** ommand **L** ine **IN** terface **T** ools*, which is not maintained anymore, but I will show it here just to pay my respects.
+
+Creating a progress bar is just as easy as we have seen with the other tools, this one doesn’t require a context manager. Here we can see a regular progress bar and a *Mill* style progress bar:
+
+<figure class="highlight python">
+
++-------------------------------------------+
+|     from time import sleep                |
+|     from clint.textui import progress     |
+|                                           |
+|     print('Clint - Regular Progress Bar') |
+|     for i in progress.bar(range(100)):    |
+|         sleep(0.02)                       |
+|                                           |
+|     print('Clint - Mill Progress Bar')    |
+|     for i in progress.mill(range(100)):   |
+|         sleep(0.02)                       |
++-------------------------------------------+
+
+</figure>
+
+And here you can see it in action:
+
+<video src="https://codingdose.info/assets/images/progressbars/clint.webm" preload autoplay loop controls></video>
+
+------------------------------------------------------------------------
+
+There are other libraries out there but these are the ones that I definitely recommend you to check out. Also, here’s a snippet of code that tests all of the progress bar styles and libraries that we have tested so far. Just make sure to install the appropriate libraries.
+
+You can clone it with Git:\
+
+<figure class="highlight bash">
+
++--------------------------------------------------------------------------------------------------+
+|     $ git clone https://gist.github.com/33e56c93c3c43cf70f19ecbfc921e358.git progressbar-testing |
++--------------------------------------------------------------------------------------------------+
+
+</figure>
+<p>
+<script src="./How_to_Easily_Use_a_Progress_Bar_in_Python_files/33e56c93c3c43cf70f19ecbfc921e358.js.Download"></script>
+</p>
+<link rel="stylesheet" href="D:/_temp/progressbar/How_to_Easily_Use_a_Progress_Bar_in_Python_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css">
+
+::: {#gist96750998 .gist bis_skin_checked="1"}
+::: {.gist-file bis_skin_checked="1"}
+::: {.gist-data bis_skin_checked="1"}
+::: {.js-gist-file-update-container .js-task-list-container .file-box bis_skin_checked="1"}
+::: {#file-progressbars-py .file bis_skin_checked="1"}
+::: {.Box-body .p-0 .blob-wrapper .data .type-python itemprop="text" bis_skin_checked="1"}
+  -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     [[\#]{.pl-c} To test these progress bars you will have to]{.pl-c}
+     [[\#]{.pl-c} install the following packages]{.pl-c}
+     [[\#]{.pl-c} pipenv install click progress progressbar2 tqdm clint]{.pl-c}
+
+     [import]{.pl-k} string
+
+     [[\#]{.pl-c} progress bars]{.pl-c}
+     [import]{.pl-k} time
+     [import]{.pl-k} click
+     [from]{.pl-k} tqdm [import]{.pl-k} tqdm
+     [from]{.pl-k} progress.bar [import]{.pl-k} Bar
+     [from]{.pl-k} progress.bar [import]{.pl-k} PixelBar
+     [from]{.pl-k} progress.spinner [import]{.pl-k} PixelSpinner
+     [from]{.pl-k} progressbar [import]{.pl-k} progressbar
+     [from]{.pl-k} clint.textui [import]{.pl-k} progress
+
+     click.secho([[']{.pl-pds}Progress - BAR[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [with]{.pl-k} Bar([[']{.pl-pds}Processing...[']{.pl-pds}]{.pl-s}) [as]{.pl-k} bar:
+     [for]{.pl-k} i [in]{.pl-k} [range]{.pl-c1}([100]{.pl-c1}):
+     time.sleep([0.02]{.pl-c1})
+     bar.next()
+
+     click.secho([[']{.pl-pds}Progress - PixelBar[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [with]{.pl-k} PixelBar([[']{.pl-pds}Processing...[']{.pl-pds}]{.pl-s}) [as]{.pl-k} bar:
+     [for]{.pl-k} i [in]{.pl-k} [range]{.pl-c1}([100]{.pl-c1}):
+     time.sleep([0.02]{.pl-c1})
+     bar.next()
+
+     click.secho([[']{.pl-pds}Progress - PixelSpinner[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [with]{.pl-k} PixelSpinner([[']{.pl-pds}Processing...[']{.pl-pds}]{.pl-s}) [as]{.pl-k} bar:
+     [for]{.pl-k} i [in]{.pl-k} [range]{.pl-c1}([100]{.pl-c1}):
+     time.sleep([0.02]{.pl-c1})
+     bar.next()
+
+     click.secho([[']{.pl-pds}[\\n]{.pl-cce}Progressbar2[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [for]{.pl-k} i [in]{.pl-k} progressbar([range]{.pl-c1}([100]{.pl-c1}), [redirect\_stdout]{.pl-v}[=]{.pl-k}[True]{.pl-c1}):
+     time.sleep([0.02]{.pl-c1})
+
+     click.secho([[']{.pl-pds}[\\n]{.pl-cce}TQDM[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [for]{.pl-k} i [in]{.pl-k} tqdm([range]{.pl-c1}([100]{.pl-c1})):
+     time.sleep([0.02]{.pl-c1})
+
+     click.secho([[']{.pl-pds}TQDM - With description[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     pbar [=]{.pl-k} tqdm([list]{.pl-c1}(string.ascii\_lowercase))
+     [for]{.pl-k} letter [in]{.pl-k} pbar:
+     pbar.set\_description([f]{.pl-s}[']{.pl-pds}[Processing ]{.pl-s}[{]{.pl-c1}letter[}]{.pl-c1}[...]{.pl-s}[']{.pl-pds})
+     time.sleep([0.09]{.pl-c1})
+
+     click.secho([[']{.pl-pds}[\\n]{.pl-cce}Click[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     fill\_char [=]{.pl-k} click.style([[']{.pl-pds}=[']{.pl-pds}]{.pl-s}, [fg]{.pl-v}[=]{.pl-k}[[']{.pl-pds}yellow[']{.pl-pds}]{.pl-s})
+     [with]{.pl-k} click.progressbar([range]{.pl-c1}([100]{.pl-c1}), [label]{.pl-v}[=]{.pl-k}[[']{.pl-pds}Loading...[']{.pl-pds}]{.pl-s}, [fill\_char]{.pl-v}[=]{.pl-k}fill\_char) [as]{.pl-k} bar:
+     [for]{.pl-k} i [in]{.pl-k} bar:
+     time.sleep([0.02]{.pl-c1})
+
+     click.secho([[']{.pl-pds}[\\n]{.pl-cce}Clint[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [for]{.pl-k} i [in]{.pl-k} progress.bar([range]{.pl-c1}([100]{.pl-c1})):
+     time.sleep([0.02]{.pl-c1})
+
+     click.secho([[']{.pl-pds}Clint - Mill[']{.pl-pds}]{.pl-s}, [bold]{.pl-v}[=]{.pl-k}[True]{.pl-c1})
+     [for]{.pl-k} i [in]{.pl-k} progress.mill([range]{.pl-c1}([100]{.pl-c1})):
+     time.sleep([0.02]{.pl-c1})
+  -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+:::
+:::
+:::
+:::
+
+::: {.gist-meta bis_skin_checked="1"}
+[view raw](https://gist.github.com/franccesco/33e56c93c3c43cf70f19ecbfc921e358/raw/796208e540f21f877b5b90655c07ac0c91aad34f/progressbars.py)\
+[progressbars.py](https://gist.github.com/franccesco/33e56c93c3c43cf70f19ecbfc921e358#file-progressbars-py)\
+hosted with ❤ by [GitHub](https://github.com/)
+:::
+:::
+:::
+
+Also, I should recall that all these libraries have more features than the ones that we have seen here, so make sure to check them out. Have fun!
+
+</div>
+
+<p></article>
+</div></p>
+<p>\
+<!-- /wp:html --></p>
+</p>
+  </div><!-- /.entry-content -->
+  <!-- Pagination -->
+            <div class="pagination">
+            </div>
+ 
+</div>
+</div>
+<!-- /#contentinfo -->
+</body>
+</html>

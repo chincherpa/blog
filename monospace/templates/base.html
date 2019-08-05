@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="{{ SITEURL }}theme/css/{{ CSS_FILE }}" type="text/css" />
+        {% if FEED_RSS %}
+        {% endif %}
+</head>
+
+<body>
+	<div id="wrap" style="width:850px">
+	    <div id="container" style="width:560px">
+            <div class="entry">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <h1><a href="lulef.online/blog" title="title">{{ SITENAME }}</a></h1>
+            <span class="description">{{ DESCRIPTION }} </span>
+            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
+        </div>
+
+        <div id="footer">
+            <div id="credits">
+                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
